@@ -1,7 +1,7 @@
 <div class="banner">
     <div class="contentt">
     <h1 > Bienvenido a TCGConsultores services</h1>
-    <a href="#">Ingresa aqui</a>
+    <a href="#">Contrata aqui</a>
    </div>
  </div>
 
@@ -14,7 +14,60 @@
  <%# </div> %>
 
 
- <div class="footer">
+<div class="container">
+    <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="display-2  font-weight-bold mt-5 text-center">Nuestros Servicios</h2>
+            </div>
+    </div>
+ <div class="row mb-5">
+            <div class="col-4 mt-5">
+                <div class="card-deck pt-5">
+                    <div class="card">
+                         <%= image_tag("sistconta.jpeg",class: 'img-fluid',  :alt => "sistema_contable") %>
+                       <div class="card-body">
+                            <h5 class="card-title">Sistema contable</h5>
+                            <p class="card-text"> Permite obtimizar hasta el 90% de tu tiempo%.</p>
+                        </div>
+                   </div>
+               </div>
+            </div>
+            <div class="col-4 mt-5">
+              <div class="card-deck pt-5">
+              <div class="card">
+                <%= image_tag("factura.jpg",class: 'img-fluid',  :alt => "sistema_factura") %>
+                <div class="card-body">
+                    <h5 class="card-title">Sistema de facturacion</h5>
+                    <p class="card-text">Sistema automatizado de facturacion.</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+            <div class="col-4 mt-5">
+            <div class="card-deck pt-5">
+              <div class="card">
+                <%= image_tag("remunera.jpg",class: 'img-fluid', :alt => "sistema_remunera") %>
+                <div class="card-body">
+                    <h5 class="">Sistema de remuneraciones</h5>
+                    <p class="card-text">Realice el pago de las remuneraciones de sus colaboradores de la manera mas sencilla y segura.</p>
+                 </div>
+                 </div>
+            </div>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="display-4  font-weight-bold mb-5 text-center">¿Cómo te ayudamos al crecimiento de tu negocio?</h2>
+            </div>
+    </div>
+</div>
+
+
+
+ <div class="footer mt-5">
   <p>©2020 TCG Consultores. Todos los derechos reservados</p>
    <img src="<%= asset_path 'footertcg.png' %>">
 
