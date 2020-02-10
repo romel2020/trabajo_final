@@ -1,3 +1,97 @@
 // Place all the styles related to the quotations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#imagen {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer {
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00e6e6;
+  color:white;
+  padding-top: 1cm;
+  text-align: center;
+  
+}
+
+.banner{
+
+    position: relative;
+    width: 100%;
+    height: calc(75vh - 50px);
+    background-color: #F5F5F5;
+    background-size: cover;
+    background-position: center;
+    transition: a11 .1s ease-in-out;
+    background-image: url("conta1.jpeg");
+    animation: banner 28s infinite linear;
+}
+
+.contentt {
+ height: 625px;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ color: #FFF;
+ background: rgba(0, 22,40, .6);
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.contentt a{
+    text-decoration: none;
+    color: #FFF;
+    padding: 9px 20px;
+    border: 1px solid #FFF;
+    text-transform: uppercase;
+    transition: a11 .1s ease-in-out;
+}
+
+.contentt a:hover{
+    background-color: #FFF;
+    color: #333;
+}
+
+@keyframes banner{
+
+    0%{
+        background-image: url("conta1.jpeg");
+    }
+
+    25%{
+        background-image: url("conta1.jpeg");
+    }
+    26% {
+        background-image: url("conta2.jpeg");
+    }
+    50%{
+        background-image: url("conta2.jpeg");
+    }
+    51%{
+        background-image: url("conta3.jpeg");
+    }
+    75%{
+        background-image: url("conta3.jpeg");
+    }
+    76%{
+        background-image: url("conta4.jpeg");
+    }
+    100%{
+        background-image: url("conta4.jpeg");
+    }
+}
+
+
