@@ -1,44 +1,42 @@
 <div class="banner">
     <div class="contentt">
-    <h1 > Bienvenido a TCGConsultores services</h1>
-    <a href="#">Contrata aqui</a>
+    <h1 >    Bienvenido         </h1>
+    <h2>         a              </h2>
+    <h2> TCGConsultores accounting</h2>
+    <h2>________________________</h2><br><br>
+    <%=link_to 'Conocenos', quotations_about_path%>
    </div>
  </div>
 
-
-
-
-<%# <div id="imagen"> %>
- <%# <img src="<%= asset_path 'pronto.gif' %>
-
- <%# </div> %>
-
-
-<div class="container">
-    <div class="row mb-5">
+    <div class="container">
+    <div id="services">
+         <div class="row mb-5">
             <div class="col-12">
                 <h2 class="display-3  font-weight-bold mt-5 text-center">Nuestros Servicios</h2>
             </div>
+       </div>
     </div>
- <div class="row mb-5">
+    <div id="plans">
+         <div class="row mb-5">
             <div class="col-12 mt-5">
-             <div class="card-deck pt-5">
-              <div class="card">
-                <%= image_tag("remunera.jpg",class: 'img-fluid', :alt => "sistema_remunera") %>
-                <div class="card-body">
-                    <h5 class="">Sistema de remuneraciones</h5>
-                    <p class="card-text">Realice el pago de las remuneraciones de sus colaboradores de la manera mas sencilla y segura.</p>
-                 </div>
-                 </div>
+                <div class="card-deck pt-5">
+                  <div class="card">
+                    <%= image_tag("remunera.jpg",class: 'img-fluid', :alt => "sistema_remunera") %>
+                      <div class="card-body">
+                        <h5 class="">Sistema de remuneraciones</h5>
+                        <p class="card-text">Realice el pago de las remuneraciones de sus colaboradores de la manera mas sencilla y segura.</p>
+                      </div>
+                   </div>
             </div>
       </div>
     </div>
+  </div>
 </div>
-
 <div class="container">
+ç  <div id="digitization">
     <div class="row mb-5">
-            <div class="col-12">
-                <h2 class="display-4  font-weight-bold mb-5 text-center">¿Porque digitalizar sus servicios?</h2>
+           <div class="col-12">
+                <h2 class="display-4  font-weight-bold mb-5 text-center">¿Por que digitalizar sus servicios?</h2>
             </div>
     </div>
 </div>
@@ -49,10 +47,7 @@
 
          </div>
     </div>
+ </div>
 </div>
- <div class="footer mt-5">
-  <p>©2020 TCG Consultores. Todos los derechos reservados</p>
-   <img src="<%= asset_path 'footertcg.png' %>">
-
-</div>
+ 
 
