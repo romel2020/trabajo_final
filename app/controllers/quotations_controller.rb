@@ -4,4 +4,11 @@ class QuotationsController < ApplicationController
 
     def about
     end
+
+    def quotes
+    end
+
+    def login
+    end
+
 end
