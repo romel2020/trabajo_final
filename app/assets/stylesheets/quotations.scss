@@ -130,8 +130,23 @@
   }
 
   .text-p {
+    padding-left: 50px;
+    font-size: 18px;
 
-    font-size: 22px;
+  }
+  .text-h {
+    padding-left: 50px;
+    }
+
+
+  .text-p1 {
+
+    font-size: 27px;
+
+  }
+  .text-h {
+
+    font-size: 50px;
 
   }
 
@@ -140,5 +155,58 @@
     background-color: #FFF ;
   }
 
+  .garantia{
+
+    height: 280px;
+    background-color: rgb(65, 60, 71);
+    background-size: cover;
+    background-position: center;
+        
+}
+
+.linea {
+  border-top: 5pt solid white;
+  width: 2%;
+  height: 100%;
+ 
+
+}
+
+@keyframes banner2{
+
+  0%{
+      background-image: image-url("imagen1.jpeg");
+      background-repeat: no-repeat;
+  }
+
+  25%{
+      background-image: image-url("imagen1.jpeg");
+      background-repeat: no-repeat;
+  }
+  26% {
+      background-image: image-url("imagen2.jpeg");
+      background-repeat: no-repeat;
+  }
+  50%{
+      background-image: image-url("imagen2.jpeg");
+      background-repeat: no-repeat;
+  }
+  51%{
+      background-image: image-url("imagen3.jpeg");
+      background-repeat: no-repeat;
+  }
+  75%{
+      background-image: image-url("imagen3.jpeg");
+      background-repeat: no-repeat;
+  }
+  76%{
+      background-image: image-url("imagen4.jpeg");
+      background-repeat: no-repeat;
+  }
+  100%{
+      background-image: image-url("imagen4.jpeg");
+      background-repeat: no-repeat;
+  }
+}
 
 
