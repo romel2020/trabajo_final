@@ -10,5 +10,11 @@ class QuotationsController < ApplicationController
 
     def login
     end
+    
+    def planes
+    end
+
+    def intro
+    end
 
 end

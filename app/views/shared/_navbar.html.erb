@@ -1,40 +1,41 @@
 
-
-<nav class="navbar navbar-light bg-light fixed-top">
-      <img src="<%= asset_path 'logo.png' %>">
-          
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            
-            <%= link_to 'links de interes',quotations_index_path, :id => "links"%>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Porque elegirnos',quotations_index_path, :id => "confiar"%>
-            
-          </li>
-          <li class="nav-item active">
-            <%= link_to 'Cotiza con nosotros', quotations_quotes_path%>
-          </li>
-          <li class="nav-item">
-            <%= link_to 'Login', quotations_login_path%>
-          </li
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
+     
+    <nav class='fix-top'>
+        <div class="container">
+    
+        <input id="responsive-menu" type="checkbox">
+        <label for="responsive-menu"><%= image_tag("logo.png",:alt => "idea") %> <span id="menu-icon"></span></label>
+        <div id="overlay"></div>
+        <ul>
+            <li><%= link_to 'Cotiza con nosotros', quotations_quotes_path%></li>
+            <li><%= link_to 'links de interes',quotations_index_path, :id => "links"%></li>
+            <li><%= link_to 'Login', quotations_login_path%></li>
+            <li><%= link_to 'Porque elegirnos',quotations_index_path, :id => "confiar"%></li>
+            <li><%= link_to 'Conoce nuestros planes contables y tributarios',quotations_planes_path, :id => "confiar"%></li>
+            <li><%= link_to 'Conoce nuestros planes web',quotations_planes_path, :id => "confiar"%></li>
+            <li><%= link_to 'Contactanos',quotations_planes_path, :id => "confiar"%></li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
-    </nav>
+        <ul id="social-media">
+         
+            <li>
+                <a href="https://twitter.com/erin_e_sullivan">
+                    <i class="fab fa-twitter"></i>
+                    <span class="screen-reader-text">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/erinesullivan1">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="screen-reader-text">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/erin_e_sullivan/">
+                    <i class="fab fa-instagram"></i>
+                    <span class="screen-reader-text">Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
