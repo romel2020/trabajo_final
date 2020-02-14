@@ -15,6 +15,7 @@ class QuotationsController < ApplicationController
     end
 
     def intro
+        render layout: "intro"
     end
 
 end
