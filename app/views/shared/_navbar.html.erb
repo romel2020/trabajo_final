@@ -1,10 +1,13 @@
 
      
     <nav class='fix-top'>
-        <div class="container">
-    
+      
+        <div class="container sinpadding">
+        
         <input id="responsive-menu" type="checkbox">
-        <label for="responsive-menu"><%= image_tag("logo.png",:alt => "idea") %> <span id="menu-icon"></span></label>
+            
+        <label for="responsive-menu"><%= image_tag("eldescueve.png",:alt => "idea", class:"pr-5") %><%=  link_to image_tag("login.png",:size => "120x40",:alt => "idea", class:"text-center", class:"pr-5"), user_session_path %><span id="menu-icon"></span></label>
+
         <div id="overlay"></div>
         <ul>
             <li><%= link_to 'Cotiza con nosotros', quotations_quotes_path%></li>

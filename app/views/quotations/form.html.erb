@@ -1,62 +1,58 @@
-<%= form_with(model: cusstomer, local: true) do |form| %>
-  <% if cusstomer.errors.any? %>
+<%= form_with(model: quotation, local: true) do |form| %>
+  <% if quotation.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(cusstomer.errors.count, "error") %> prohibited this cusstomer from being saved:</h2>
+      <h2><%= pluralize(quotation.errors.count, "error") %> prohibited this quotation from being saved:</h2>
 
       <ul>
-      <% cusstomer.errors.full_messages.each do |message| %>
+      <% quotations.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :rut %>
-    <%= form.text_field :rut %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
+ <div class='container'><br>
+   <div class="field">
+    <%= form.label :Nombre %>
     <%= form.text_field :name %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :last_name %>
+    <%= form.label :Apellido %>
     <%= form.text_field :last_name %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label :Telefono %>
     <%= form.text_field :phone %>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email %>
   </div>
-
-  <div class="field">
-    <%= form.label :profile %>
+  <br>
+   <div class="field">
+    <%= form.label :Perfil %>
     <%= form.text_field :profile %>
   </div>
-
-  <div class="field">
-    <%= form.label :compañy_size %>
+  <br>
+    <div class="field">
+    <%= form.label :Compañia %>
     <%= form.text_field :compañy_size %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :doc_month %>
+    <%= form.label :Documentos,"Documentos mensuales" %>
     <%= form.text_field :doc_month %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :help_you %>
+    <%= form.label :Descripcion %>
     <%= form.text_field :help_you %>
   </div>
-
+ <br>
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>

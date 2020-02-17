@@ -1,0 +1,39 @@
+
+
+<h1>Cotizaciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Telefono</th>
+      <th>email</th>
+      <th>Perfil</th>
+      <th>Compañia</th>
+      <th>Documentos mensuales</th>
+      <th>En que te puedo ayudar</th>
+      <th colspan="8"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotation.each do |quotation| %>
+      <tr>
+        <td><%= quotation.name %></td>
+        <td><%= quotation.last_name %></td>
+        <td><%= quotation.phone %></td>
+        <td><%= quotation.email %></td>
+        <td><%= quotation.profile %></td>
+        <td><%= quotation.compañy_size %></td>
+        <td><%= quotation.doc_month %></td>
+        <td><%= quotation.help_you%></td>
+        <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Home', quotations_index_path %>
