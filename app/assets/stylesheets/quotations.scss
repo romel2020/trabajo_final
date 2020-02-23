@@ -10,17 +10,10 @@
   
 }
 
-.footer {
-
+footer {
   
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: #91bdbd;
-  color:rgb(12, 126, 18);
-  padding-top: 1cm;
-  text-align: center;
-  
+    
 }
 
 .login {
@@ -74,14 +67,17 @@
 }
 
 .formlogin {
-    width: 350px;
+    width: 270px;
     min-height: 220px;
     height: auto;
     border-radius: 5px;
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-image: linear-gradient(-225deg, rgb(50, 165, 130) 50%, rgb(207, 129, 25) 50%);
+    background: #c2e59c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #64b3f4, #c2e59c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     
 }
 .margenlogin {
@@ -188,10 +184,7 @@
     font-size: 22px;
 
   }
-  .nav-color {
-
-    background-color: rgba(231, 237, 238, 0.3);
-  }
+ 
 
   .garantia{
 
@@ -233,6 +226,9 @@ position: fixed;
      z-index: -1;
 
 }
+
+
+
 
 
 .p1 {
@@ -292,6 +288,7 @@ position: fixed;
 }
 
 
+
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
 
@@ -301,141 +298,13 @@ position: fixed;
     box-sizing: border-box;
 }
 
-
-/************************************************/
-/****************** NAVIGATION ******************/
-/************************************************/
-nav {
-    background: #d8d4d4;
-    color: #1d1f20;
-    left: 0;
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
-}
-
-/*** INPUT ***/
-nav input {
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-/*** LABEL ***/
-nav label {
-    cursor: pointer;
-    display: block;
-    font: 2em/1 'Oswald', sans-serif;
-    padding: 0.5em;
-}
-
-/* Hamburger Icon */
-#menu-icon,
-#menu-icon:before,
-#menu-icon:after {
-    background: #1790cc;
-    border-radius: 0.05em;
-    height: 0.2em;
-    transition: all 0.2s ease-in-out;
-    width: 100%;
-}
-
-#menu-icon {
-    display: inline-block;
-    margin: 1em 0;
-    max-width: 1em;
-    position: relative;
-}
-
-nav label #menu-icon {
+.tamaño{
     
-    float: right;
-}
-
-#menu-icon:before,
-#menu-icon:after {
-    content: '';
-    left: 0;
-    position: absolute;
-}
-
-#menu-icon:before {
-    top: -0.4em;
-}
-
-#menu-icon:after {
-    bottom: -0.4em;
-}
-
-/* Close Icon */
-nav input[type=checkbox]:checked + label #menu-icon {
-    background: transparent;
-}
-
-nav input[type=checkbox]:checked + label #menu-icon:before {
-    top: 0;
-    transform: rotate(-45deg);
-}
-
-nav input[type=checkbox]:checked + label #menu-icon:after {
-    bottom: 0;
-    transform: rotate(45deg);
+    height: 430px;
+    box-sizing: border-box;
 }
 
 
-/*** MENU ***/
-/* Overlay */
-nav input:checked ~ #overlay {
-    background: transparentize($color: #92dfb9, $amount: 0.5);
-    bottom: 0;
-    left: 0;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100vw;
-    z-index: -1;
-   
-}
-
-/* List */
-nav ul {
-    font-size: 1.5em;
-    list-style: none;
-    margin: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
-}
-
-nav input:checked ~ ul {
-    margin: 1em;
-    max-height: inherit;
-    opacity: 1;
-}
-
-nav ul > li {
-    margin: 0.5em 0;
-}
-
-nav ul a {
-    color: #1d1f20!important;
-    text-decoration: none;
-}
-
-nav ul a:hover {
-    text-decoration: underline;
-}
-
-/* Social Media */
-nav ul#social-media > li {
-    display: inline-block;
-    font-size: 1.5em;
-    margin: 0.5em;
-}
 
 @keyframes banner2{
 
