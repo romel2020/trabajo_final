@@ -1,0 +1,72 @@
+
+<%=form_with(model: quotation, local: true) do |form| %>
+  <% if quotation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quotation.errors.count, "error") %> prohibited this quotation from being saved:</h2>
+
+      <ul>
+      <% quotations.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class='container'>
+        <div class="field">
+          <%= form.label :Nombre,"Nombre" %>
+          <%= form.text_field :name %>
+        </div>
+
+        <div class="field">
+          <%= form.label :Apellido,"Apellido" %>
+          <%= form.text_field :last_name %>
+        </div>
+        <div class="field">
+          <%= form.label :Telefono,"Telefono" %>
+          <%= form.text_field :phone %>
+        </div>
+        <div class="field">
+          <%= form.label :email,"Email" %>
+            <%= form.email_field :email %>
+        </div>
+        <div class="field">
+            <%= form.label :Compañia,"Compañia" %>
+            <%= form.text_field :compañy_size %>
+        </div>
+        <div class="field">
+            <%= form.label :Documentos,"Documentos mensuales" %>
+            <%= form.select :doc_month, options_for_select(@document), prompt: 'select an option' %>
+        </div>
+        <div class="field">
+            <%= form.label :Perfil,"Perfil" %>
+            <%= form.select :Perfil, options_for_select(@status), prompt: 'select an option' %>
+        </div>
+        <div class="field">
+          <%= form.label :Descripcion,"Consulta" %>
+          <%= form.text_field :help_you %>
+        </div>
+
+         <div class="actions">
+          <%= form.submit %>
+         </div>
+    </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

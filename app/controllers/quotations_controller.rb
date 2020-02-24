@@ -1,13 +1,16 @@
 class QuotationsController < ApplicationController
-    before_action :authenticate_user!, only: [:destroy ]
+    before_action :authenticate_user!, only: [:login ]
     def index
     end
 
     def about
     end
 
-    def quotes
+    def new
+        
         @quotation = Quotation.new
+        @document = Document.pluck(:cant)
+        @status = Status.pluck(:name)
     end
 
     def create
@@ -19,30 +22,32 @@ class QuotationsController < ApplicationController
         else
             flash[:alert]="La cotizacion no fue enviada con exito, intentelo mas tarde"
         end
-        redirect_to quotations_quotes_path
+        redirect_to quotations_new_path
     end
     
     def edit 
         @quotation = @quotation.find(params[:id]) 
     end
     def listado
-
+     
      @quotation = Quotation.all
+     render layout: "login"
     end
          
     def update
         @quotation = Quotation.find(params[:id])
         @quotation.update(quotation_params)
-             redirect_to quotations_quotes_path
+             redirect_to quotations_new_path
           end
           
     def destroy
         @quotation = Quotation.find(params[:id])
         @quotation.destroy
-             redirect_to quotations_quotes_path
+             redirect_to quotations_new_path
     end
 
     def login
+        render layout: "login"
     end
     
     def planes

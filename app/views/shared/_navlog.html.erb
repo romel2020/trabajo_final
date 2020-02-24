@@ -1,0 +1,19 @@
+<nav class='fix-top'>
+         
+        <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul>
+                    
+                    <li><%= link_to 'Cotización', quotations_listado_path %></li>
+                    <li><%= link_to 'Crear empresas', new_company_path %></li>
+                    <li><%= link_to 'Sign_out', destroy_user_session_path, method: :delete %></li>
+            </ul>
+            
+
+        </div>
+
+        <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menú</button>
+        </div>
+        
+</nav>
