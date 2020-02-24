@@ -7,7 +7,7 @@ class Users::SessionsController < Devise::SessionsController
   def new
      
      super
-     render layout: "new"
+     
      redirect_to quotation_login_path
   end
 
