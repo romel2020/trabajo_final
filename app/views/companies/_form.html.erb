@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="formulario">
   <div class="field">
     <%= form.label :name, "Nombre" %>
     <%= form.text_field :name %>
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :location_id, " Localidad"%>
-    <%= form.text_field :location_id %>
+    <%= form.select :location, options_for_select(@cities), prompt: 'select an option' %>
   </div>
 
   <div class="actions">
