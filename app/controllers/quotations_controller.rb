@@ -28,17 +28,26 @@ class QuotationsController < ApplicationController
     def edit 
         @quotation = @quotation.find(params[:id]) 
     end
-    def listado
+    def show
      
-     @quotation = Quotation.all
+     @quotation = Quotation.all.reverse
+     @todos = Quotation.where( status: true)
      render layout: "login"
     end
          
     def update
         @quotation = Quotation.find(params[:id])
         @quotation.update(quotation_params)
-             redirect_to quotations_new_path
-          end
+        @quotation.save
+        redirect_to quotations_new_path
+    end
+
+    def update_status
+        @quotation = Quotation.find(params[:id])
+        @quotation.status = !@quotation.status
+        @quotation.save
+        redirect_to quotations_show_path
+    end
           
     def destroy
         @quotation = Quotation.find(params[:id])

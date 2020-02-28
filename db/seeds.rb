@@ -21,7 +21,7 @@ Document.create(cant: '51-100')
 Status.create(name: 'Dueño')
 Status.create(name: 'Contador')
 Status.create(name: 'RR.HH')
-
+=begin
 Location.create(name: 'Arica')
 Location.create(name: 'Arica',city: Location.find_by_name('Arica'))
 Location.create(name: 'Camarones',city: Location.find_by_name('Arica'))
@@ -49,3 +49,4 @@ Location.create(name: 'San Pedro de Atacama',city: Location.find_by_name('Calama
 Location.create(name: 'Tocopilla')
 Location.create(name: 'Tocopilla',city: Location.find_by_name('Tocopilla'))
 Location.create(name: 'Maria Elena',city: Location.find_by_name('Calama'))
+=end

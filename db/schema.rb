@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_02_28_123049) do
     t.datetime "updated_at", null: false
     t.bigint "document_id"
     t.bigint "status_id"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.index ["document_id"], name: "index_quotations_on_document_id"
     t.index ["status_id"], name: "index_quotations_on_status_id"
   end

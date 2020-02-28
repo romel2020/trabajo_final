@@ -9,12 +9,13 @@ Rails.application.routes.draw do
   get 'quotations/new'
   get 'quotations/login', to:'quotations#login'
   get 'quotations/planes', to:'quotations#planes'
-  get 'quotations/listado', to: 'quotations#listado'
+  get 'quotations/show', to: 'quotations#show'
   get 'quotations/intro', to:'quotations#intro'
   get 'quotations/login', to: 'quotation#login'
   post 'quotations', to: 'quotations#create'
   get 'quotations/:id/edit', to: 'quotations#edit'
   patch 'quotations/:id', to:'quotations#update', as: 'quotation'
+  patch 'quotations/status/:id', to:'quotations#update_status', as: 'quotation_status'
   delete 'quotations/:id', to: 'quotations#destroy' ,as: 'delete_quotation'
   
   
