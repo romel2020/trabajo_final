@@ -17,7 +17,7 @@ El tablero Trello con el backlog y las historias de usuario esta disponible en e
 
 Heroku esta disponible en el siguiente link
 
-[Heroku] (https://fathomless-shelf-22869.herokuapp.com/quotations/index)
+[Heroku] (https://fathomless-shelf-22869.herokuapp.com/)
 
 ![alt text][logic]
 [logic]: /conceptual_tcg.png
