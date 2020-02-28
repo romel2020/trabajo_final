@@ -7,7 +7,7 @@
     <div class='table-responsive margen_abajo'>
     <table class='table table-striped table-bordered table-hover'>
       <thead>
-        <tr> 
+        <tr class='bg-primary text-white'> 
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Telefono</th>
@@ -19,12 +19,13 @@
           <th>Fecha de creación</th>
           <th>Borrar</th>
           <th>Cotizar</th>
-          <th colspan="8"></th>
+          <th colspan="11"></th>
         </tr>
       </thead>
 
       <tbody>
         <% @quotation.each do |quotation| %>
+        <% if quotation.status == false %>
           <tr class="bg-danger">
             <td><%= quotation.name %></td>
             <td><%= quotation.last_name %></td>
@@ -36,18 +37,24 @@
             <td><%= quotation.help_you%></td>
             <td><%= quotation.created_at%></td>
             <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            
-            <td>
-            <% if quotation.status == false%>
-            <%= link_to 'Cotizar', quotation_status_path(quotation), method: :patch %>
-            <% else %>
-            <%= link_to 'Cotizado', quotation_status_path(quotation), method: :patch %>
-            <tr class='bg-success'>
-          
-            <% end %>
-            </td>
-
+            <td><%= link_to 'Cotizar', quotation_status_path(quotation), method: :patch %></td>
           </tr>
+        <% else %>
+        <tr class="bg-success">
+            <td><%= quotation.name %></td>
+            <td><%= quotation.last_name %></td>
+            <td><%= quotation.phone %></td>
+            <td><%= quotation.email %></td>
+            <td><%= quotation.profile %></td>
+            <td><%= quotation.compañy_size %></td>
+            <td><%= quotation.doc_month %></td>
+            <td><%= quotation.help_you%></td>
+            <td><%= quotation.created_at%></td>
+            <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Cotizado', quotation_status_path(quotation), method: :patch %></td>
+          </tr>
+        <% end %>
+      
         <% end %>
       </tbody>
     </table>
