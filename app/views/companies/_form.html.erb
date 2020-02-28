@@ -15,6 +15,14 @@
     <%= form.label :name, "Nombre" %>
     <%= form.text_field :name %>
   </div>
+   <div class="field">
+    <%= form.label :name, "Nombre Fantasia" %>
+    <%= form.text_field :fantasyname %>
+  </div>
+  <div class="field">
+    <%= form.label :contact, "Rut empresa" %>
+    <%= form.text_field :companyrut %>
+  </div>
 
   <div class="field">
     <%= form.label :address, "Dirección" %>
@@ -25,11 +33,18 @@
     <%= form.label :contact, "Contacto" %>
     <%= form.text_field :contact %>
   </div>
+<div class="field">
+    <%= form.label :contact, "Rut Contacto" %>
+    <%= form.text_field :contactrut %>
+  </div>
+
 
   <div class="field">
     <%= form.label :phone, " Teléfono" %>
     <%= form.text_field :phone %>
   </div>
+
+
 
 <!-- <%# <div class="field">
     <%#= form.label :location_id, " Localidad"%>
