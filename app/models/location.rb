@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
-
+=begin
   belongs_to :city, class_name: 'Location', optional: true, foreign_key: :location_id
   has_many :communes, class_name: 'Location', dependent: :destroy
   scope :base_location, -> { where(location_id: nil) }
@@ -14,6 +14,6 @@ class Location < ApplicationRecord
       city.all_parents << city
     end
   end
-
+=end
 end
 

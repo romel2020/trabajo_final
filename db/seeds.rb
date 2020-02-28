@@ -11,6 +11,8 @@ Document.destroy_all
 Status.destroy_all
 Location.destroy_all
 
+
+Document.create(cant: 'Sin información')
 Document.create(cant: '0-15')
 Document.create(cant: '16-30')
 Document.create(cant: '31-50')

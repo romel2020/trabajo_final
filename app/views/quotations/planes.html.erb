@@ -74,64 +74,80 @@
                 <h2 class="text-h text-center"> Planes Tributario y contable según tu necesidad</h2><br>
       </div>
       
+<div class="contenedor">
+      <div class="contenedor_tarjeta">
 
-          <div class='container mt-5'>
-               <div class="card-deck">
-                    <div class="card text-white bg-success mb-3" style="max-width: 25rem">
-                     
-                      <div class="card-body"> 
-                        <p class="card-title text-h2">Plan Básico</p>
-                        <p class="card-text displey-4">- 15 documentos Tributarios</p>
-                        <p class="card-text displey-4">- Formulario número 29 (SII)</p>
-                        <p class="card-text displey-4">- Registros de Compras y Ventas</p>
-                        <p class="card-text displey-4">- Balance Tributario</p>
-                        <p class="card-text displey-4">- Declaración de Renta Anual</p>
-                      </div>
-                    </div>
-                       <div class="card text-white bg-success mb-3" style="max-width: 25rem">
-                         <div class="card-body">
-                              <p class="card-title text-h2">Plan Emprendedor</p>
-                              <p class="card-text displey-4">- Hasta 4 Trabajadores </p>
-                              <p class="card-text displey-4">- 30 Documentos Tributarios</p>
-                              <p class="card-text displey-4">- Contratos del Personal</p>
-                              <p class="card-text displey-4">- Remuneraciones e imposiciones</p>
-                              <p class="card-text displey-4">- Formulario número 29 (SII)</p>
-                              <p class="card-text displey-4">- Registros de Compras y Ventas</p>
-                              <p class="card-text displey-4">- Balance Tributario</p>
-                              <p class="card-text displey-4">- Declaración de Renta Anual</p>
-                           </div>
-                         </div>
-                    <div class="card text-white bg-success mb-3" style="max-width: 25rem">
-                    
-                      <div class="card-body">
-                        <p class="card-title text-h2">Plan Pyme</p>
-                        <p class="card-text displey-4">- Hasta 10 Trabajadores</p>
-                        <p class="card-text displey-4">- 50 Documentos Tributarios</p>
-                        <p class="card-text displey-4">- Contratos del Personal</p>
-                        <p class="card-text displey-4">- Remuneraciones e imposiciones</p>
-                        <p class="card-text displey-4">- Formulario número 29 (SII)</p>
-                        <p class="card-text displey-4">- Registros de Compras y Ventas</p>
-                        <p class="card-text displey-4">- Balance Tributario</p>
-                        <p class="card-text displey-4">- Declaración de Renta Anual</p>
-                       
-                      </div>
-                    </div>
-                   <div class="card text-white bg-success mb-3" style="max-width: 25rem">
-                    
-                      <div class="card-body">
-                        <p class="card-title text-h2">Plan Business</p>
-                        <p class="card-text displey-4">- Hasta 25 Trabajadores</p>
-                        <p class="card-text displey-4">- 100 Documentos Tributarios</p>
-                        <p class="card-text displey-4">- Contratos del Personal</p>
-                        <p class="card-text displey-4">- Remuneraciones e imposiciones</p>
-                        <p class="card-text displey-4">- Formulario número 29 (SII)</p>
-                        <p class="card-text displey-4">- Registros de Compras y Ventas</p>
-                        <p class="card-text displey-4">- Balance Tributario</p>
-                        <p class="card-text displey-4">- Declaración de Renta Anual</p>
-                      </div>
-                    </div>
-                   <div>
-                  </div>
-                  
-                 
-                  
+        <figure>
+              <%= image_tag("descuento.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
+            <figcaption class="trasera">
+              <h2>Plan Básico</h2>
+              <hr>
+              <p>- 15 documentos Tributarios</p>
+              <p>- Formulario número 29 (SII)</p>
+              <p>- Registros de Compras y Ventas</p>
+              <p>- Balance Tributario</p>
+              <p>- Declaración de Renta Anual</p>
+              <br>
+              <p>ANTES<del> $29990 </del></p>
+              <p>AHORA $14990 </p>
+              <br>
+              <div class="text-center">
+              <%= link_to 'Contratar', quotations_index_path,class:"btn btn-outline-light btn-lg" %>
+              </div>          
+            </figcaption>
+          </figure>
+        </div>
+        <div class="contenedor_tarjeta">
+
+          <figure>
+                <%= image_tag("descuento.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
+              <figcaption class="trasera">
+                <h2>Plan Emprendedor</h2>
+                <hr>
+                  <p>- Hasta 4 Trabajadores </p>
+                  <p>- 30 Documentos Tributarios</p>
+                  <p>- Contratos del Personal</p>
+                  <p>- Remuneraciones e imposiciones</p>
+                  <p>- Formulario número 29 (SII)</p>
+                  <p>- Registros de Compras y Ventas</p>
+                  <p>- Balance Tributario</p>
+                  <p>- Declaración de Renta Anual</p>
+                  <br>
+                  <p>ANTES<del> $59990 </del></p>
+                  <p>AHORA $29990 </p>
+                  <br>
+                  <div class="text-center">
+                  <%= link_to 'Contratar', quotations_index_path,class:"btn btn-outline-light btn-lg" %>
+                  </div>   
+              </figcaption>
+            </figure>
+          </div>
+          <div class="contenedor_tarjeta">
+
+              <figure>
+                    <%= image_tag("descuento.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
+                  <figcaption class="trasera">
+                    <h2>Plan Pyme</h2>
+                    <hr>
+                              
+                      <p>- Hasta 10 Trabajadores</p>
+                      <p>- 50 Documentos Tributarios</p>
+                      <p>- Contratos del Personal</p>
+                      <p>- Remuneraciones e imposiciones</p>
+                      <p>- Formulario número 29 (SII)</p>
+                      <p>- Registros de Compras y Ventas</p>
+                      <p>- Balance Tributario</p>
+                      <p>- Declaración de Renta Anual</p>
+                      <br>
+                      <p>ANTES<del> $119990 </del></p>
+                      <p>AHORA $59990 </p>
+                      <br>
+                      <div class="text-center">
+                      <%= link_to 'Contratar', quotations_index_path,class:"btn btn-outline-light btn-lg" %>
+                      </div>   
+                  </figcaption>
+                </figure>
+          </div>
+      </div>
+
+            

@@ -16,7 +16,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
-    @cities = Location.base_location.pluck(:name,:id)
+    #@cities = Location.base_location.pluck(:name,:id)
     render layout: "login"
   end
 

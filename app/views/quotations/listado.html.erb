@@ -17,6 +17,7 @@
       <th>Compañia</th>
       <th>Documentos mensuales</th>
       <th>En que te puedo ayudar</th>
+      <th>Fecha de creación</th>
       <th colspan="8"></th>
     </tr>
   </thead>
@@ -32,6 +33,7 @@
         <td><%= quotation.compañy_size %></td>
         <td><%= quotation.doc_month %></td>
         <td><%= quotation.help_you%></td>
+        <td><%= quotation.created_at%></td>
         <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
