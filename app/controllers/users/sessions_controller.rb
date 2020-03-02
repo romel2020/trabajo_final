@@ -8,7 +8,7 @@ class Users::SessionsController < Devise::SessionsController
     
      super
      
-     redirect_to quotation_login_path
+     redirect_to quotation_index_path
      
   end
 

@@ -12,11 +12,11 @@ Status.destroy_all
 Location.destroy_all
 
 
-Document.create(cant: 'Sin información')
-Document.create(cant: '0-15')
-Document.create(cant: '16-30')
-Document.create(cant: '31-50')
-Document.create(cant: '51-100')
+Document.create(name: 'Sin información')
+Document.create(name: '0-15')
+Document.create(name: '16-30')
+Document.create(name: '31-50')
+Document.create(name: '51-100')
 
 Status.create(name: 'Dueño')
 Status.create(name: 'Contador')

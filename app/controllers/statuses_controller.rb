@@ -1,4 +1,5 @@
 class StatusesController < ApplicationController
+=begin
   before_action :set_status, only: [:show, :edit, :update, :destroy]
 
   # GET /statuses
@@ -71,4 +72,5 @@ class StatusesController < ApplicationController
     def status_params
       params.require(:status).permit(:name)
     end
+=end
 end

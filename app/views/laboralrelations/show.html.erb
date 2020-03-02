@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Undefined:</strong>
+  <%= @laboralrelation.undefined %>
+</p>
+
+<p>
+  <strong>Date ini:</strong>
+  <%= @laboralrelation.date_ini %>
+</p>
+
+<p>
+  <strong>Date finish:</strong>
+  <%= @laboralrelation.date_finish %>
+</p>
+
+<p>
+  <strong>Base salary:</strong>
+  <%= @laboralrelation.base_salary %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @laboralrelation.status %>
+</p>
+
+<%= link_to 'Edit', edit_laboralrelation_path(@laboralrelation) %> |
+<%= link_to 'Back', laboralrelations_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  undefined: false
+  date_ini: MyString
+  date_finish: MyString
+  base_salary: MyString
+  status: MyString
+
+two:
+  undefined: false
+  date_ini: MyString
+  date_finish: MyString
+  base_salary: MyString
+  status: MyString

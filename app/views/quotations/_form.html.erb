@@ -5,7 +5,7 @@
       <h2><%= pluralize(quotation.errors.count, "error") %> prohibited this quotation from being saved:</h2>
 
       <ul>
-      <% quotations.errors.full_messages.each do |message| %>
+      <% quotation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -35,14 +35,17 @@
             <%= form.label :Compañia,"Compañia" %>
             <%= form.text_field :compañy_size %>
         </div>
+               
+         <div class="field">
+            <%= form.label :Document_id,"Documentos mensuales" %>
+            <%= form.select :document_id, options_for_select(@document), prompt: 'select an option' %>
+        
         <div class="field">
-            <%= form.label :Documentos,"Documentos mensuales" %>
-            <%= form.select :doc_month, options_for_select(@document), prompt: 'select an option' %>
+            <%= form.label :status_id,"Perfil" %>
+            <%= form.select :status_id, options_for_select(@status), prompt: 'select an option' %>
         </div>
-        <div class="field">
-            <%= form.label :Perfil,"Perfil" %>
-            <%= form.select :Perfil, options_for_select(@status), prompt: 'select an option' %>
-        </div>
+
+       
         <div class="field">
           <%= form.label :Descripcion,"Consulta" %>
           <%= form.text_field :help_you %>

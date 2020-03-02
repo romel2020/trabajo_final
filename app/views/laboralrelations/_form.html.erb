@@ -1,0 +1,42 @@
+<%= form_with(model: laboralrelation, local: true) do |form| %>
+  <% if laboralrelation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(laboralrelation.errors.count, "error") %> prohibited this laboralrelation from being saved:</h2>
+
+      <ul>
+      <% laboralrelation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :undefined %>
+    <%= form.check_box :undefined %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_ini %>
+    <%= form.text_field :date_ini %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_finish %>
+    <%= form.text_field :date_finish %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base_salary %>
+    <%= form.text_field :base_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,38 +1,42 @@
 class QuotationsController < ApplicationController
     before_action :authenticate_user!, only: [:login ]
     def index
+     
+        @quotation = Quotation.all.reverse
+        @todos = Quotation.where( status: true)
+        render layout: "login"
     end
 
-    def about
-    end
+    
 
     def new
         
         @quotation = Quotation.new
-        @document = Document.pluck(:cant)
-        @status = Status.pluck(:name)
+        @document = Document.pluck(:name,:id)
+        @status = Status.pluck(:name,:id)
+       
+      
     end
 
     def create
         
         @quotation = Quotation.new(quotation_params)
-        
-        if @quotation.save
-            flash[:notice]="La cotizacion fue enviada con exito, dentro de las proximas 24 horas nos comunicaremos con usted"
-        else
-            flash[:alert]="La cotizacion no fue enviada con exito, intentelo mas tarde"
-        end
-        redirect_to quotations_new_path
+        respond_to do |format|
+            if @quotation.save
+              format.html { redirect_to @quotation, notice: 'Quotation was successfully created.' }
+              format.json { render :show, status: :created, location: @quotation }
+            else
+              format.html { render :new }
+              format.json { render json: @quotation.errors, status: :unprocessable_entity }
+            end
+          end
     end
     
     def edit 
         @quotation = @quotation.find(params[:id]) 
     end
+    
     def show
-     
-     @quotation = Quotation.all.reverse
-     @todos = Quotation.where( status: true)
-     render layout: "login"
     end
          
     def update
@@ -59,17 +63,14 @@ class QuotationsController < ApplicationController
         render layout: "login"
     end
     
-    def planes
-    end
+    
 
-    def intro
-        render layout: "intro"
-    end
+    
 
     private
 
     def quotation_params
-        params.require(:quotation).permit(:name,:last_name,:phone,:email,:profile,:compañy_size,:doc_month,:help_you)
+        params.require(:quotation).permit(:name, :last_name, :phone,:email, :compañy_size, :help_you, :status_id, :document_id)
       end
 
      

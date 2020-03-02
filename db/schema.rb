@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_28_123049) do
+ActiveRecord::Schema.define(version: 2020_03_02_183754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "afps", force: :cascade do |t|
+    t.string "name"
+    t.string "comision"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "laboralrelation_id"
+    t.index ["laboralrelation_id"], name: "index_afps_on_laboralrelation_id"
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -23,16 +33,98 @@ ActiveRecord::Schema.define(version: 2020_02_28_123049) do
     t.bigint "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "fantasyname"
-    t.string "companyrut"
-    t.string "contactrut"
+    t.bigint "laboralrelation_id"
+    t.bigint "mutual_id"
+    t.index ["laboralrelation_id"], name: "index_companies_on_laboralrelation_id"
     t.index ["location_id"], name: "index_companies_on_location_id"
+    t.index ["mutual_id"], name: "index_companies_on_mutual_id"
+  end
+
+  create_table "compensationboxes", force: :cascade do |t|
+    t.string "name"
+    t.string "comision"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "credits", force: :cascade do |t|
+    t.string "date_ini"
+    t.string "quotes"
+    t.string "date_finish"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "amount"
+    t.string "description"
+    t.bigint "laboralrelation_id"
+    t.index ["laboralrelation_id"], name: "index_credits_on_laboralrelation_id"
   end
 
   create_table "documents", force: :cascade do |t|
-    t.string "cant"
+    t.bigint "document_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.bigint "quotation_id"
+    t.index ["document_id"], name: "index_documents_on_document_id"
+    t.index ["quotation_id"], name: "index_documents_on_quotation_id"
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string "rut"
+    t.string "name"
+    t.string "father_name"
+    t.string "mother_name"
+    t.string "date_ini"
+    t.string "nationality"
+    t.string "sexo"
+    t.string "address"
+    t.string "phone_fix"
+    t.string "phone"
+    t.string "email"
+    t.string "charges"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "laboralrelation_id"
+    t.index ["laboralrelation_id"], name: "index_employees_on_laboralrelation_id"
+  end
+
+  create_table "groupos", force: :cascade do |t|
+    t.string "cargo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "laboralrelation_id"
+    t.index ["laboralrelation_id"], name: "index_groupos_on_laboralrelation_id"
+  end
+
+  create_table "healths", force: :cascade do |t|
+    t.string "name"
+    t.string "comision"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "laboralrelation_id"
+    t.index ["laboralrelation_id"], name: "index_healths_on_laboralrelation_id"
+  end
+
+  create_table "laboralrelations", force: :cascade do |t|
+    t.boolean "undefined"
+    t.string "date_ini"
+    t.string "date_finish"
+    t.string "base_salary"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "afp_id"
+    t.bigint "employee_id"
+    t.bigint "health_id"
+    t.bigint "company_id"
+    t.bigint "credit_id"
+    t.index ["afp_id"], name: "index_laboralrelations_on_afp_id"
+    t.index ["company_id"], name: "index_laboralrelations_on_company_id"
+    t.index ["credit_id"], name: "index_laboralrelations_on_credit_id"
+    t.index ["employee_id"], name: "index_laboralrelations_on_employee_id"
+    t.index ["health_id"], name: "index_laboralrelations_on_health_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -41,6 +133,16 @@ ActiveRecord::Schema.define(version: 2020_02_28_123049) do
     t.datetime "updated_at", null: false
     t.string "name"
     t.index ["location_id"], name: "index_locations_on_location_id"
+  end
+
+  create_table "mutuals", force: :cascade do |t|
+    t.string "name"
+    t.string "comision"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "company_id"
+    t.index ["company_id"], name: "index_mutuals_on_company_id"
   end
 
   create_table "quotations", force: :cascade do |t|
@@ -56,15 +158,16 @@ ActiveRecord::Schema.define(version: 2020_02_28_123049) do
     t.datetime "updated_at", null: false
     t.bigint "document_id"
     t.bigint "status_id"
-    t.boolean "status", default: false
     t.index ["document_id"], name: "index_quotations_on_document_id"
     t.index ["status_id"], name: "index_quotations_on_status_id"
   end
 
   create_table "statuses", force: :cascade do |t|
-    t.string "name"
+    t.bigint "status_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.index ["status_id"], name: "index_statuses_on_status_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,8 +182,24 @@ ActiveRecord::Schema.define(version: 2020_02_28_123049) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "afps", "laboralrelations"
+  add_foreign_key "companies", "laboralrelations"
   add_foreign_key "companies", "locations"
+  add_foreign_key "companies", "mutuals"
+  add_foreign_key "credits", "laboralrelations"
+  add_foreign_key "documents", "documents"
+  add_foreign_key "documents", "quotations"
+  add_foreign_key "employees", "laboralrelations"
+  add_foreign_key "groupos", "laboralrelations"
+  add_foreign_key "healths", "laboralrelations"
+  add_foreign_key "laboralrelations", "afps"
+  add_foreign_key "laboralrelations", "companies"
+  add_foreign_key "laboralrelations", "credits"
+  add_foreign_key "laboralrelations", "employees"
+  add_foreign_key "laboralrelations", "healths"
   add_foreign_key "locations", "locations"
+  add_foreign_key "mutuals", "companies"
   add_foreign_key "quotations", "documents"
   add_foreign_key "quotations", "statuses"
+  add_foreign_key "statuses", "statuses"
 end
