@@ -1,5 +1,5 @@
 class AddNameToStatus < ActiveRecord::Migration[5.2]
   def change
-    add_column :statuses, :name, :string
+    add_column :positions, :name, :string
   end
 end

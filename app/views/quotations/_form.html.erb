@@ -41,14 +41,14 @@
             <%= form.select :document_id, options_for_select(@document), prompt: 'select an option' %>
         
         <div class="field">
-            <%= form.label :status_id,"Perfil" %>
-            <%= form.select :status_id, options_for_select(@status), prompt: 'select an option' %>
+            <%= form.label :position_id,"Perfil" %>
+            <%= form.select :position_id, options_for_select(@position), prompt: 'select an option' %>
         </div>
 
        
         <div class="field">
           <%= form.label :Descripcion,"Consulta" %>
-          <%= form.text_field :help_you %>
+          <%= form.text_area :help_you, size: "40x6" %>
         </div>
 
          <div class="actions">

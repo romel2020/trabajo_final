@@ -1,0 +1,52 @@
+<div class=" fondo_formulario2">
+  <div class="container pt-5">
+  <h1 class="text-center">Resumen Consulta enviada exitosamente !!!!!</h1>
+    <div class="row margen_form">
+        <div class="col-6">
+            
+                
+                <p>
+                <strong>La consulta fue realizada por : </strong>
+                <%= @quotation.name %>
+                <%= @quotation.last_name %>
+                </p>
+
+                <p>
+                <strong>Me pueden contactar al teléfono :  </strong>
+                <%= @quotation.phone %>
+                </p>
+
+                <p>
+                <strong>o al mail:</strong>
+                <%= @quotation.email %>
+                </p>
+
+                <p>
+                <strong>Pertenesco a la empresa: </strong>
+                <%= @quotation.compañy_size %>
+                </p>
+
+                <p>
+                <strong>MI cargo es : </strong>
+                <%= @quotation.position.name %>
+                </p>
+                <p>
+                <strong>Docu mensuales entre : </strong>
+                <%= @quotation.document.name %>
+                </p>
+      </div>
+          <div class="col-6">
+
+                <%= image_tag("envio.gif",:alt => "idea") %>
+            
+               
+          </div>
+            <%= link_to 'Home', homes_index_path , class:"btn btn-outline-light btn-primary text-center" %>
+        </div>
+         
+   </div>
+   </div> 
+
+
+
+ 

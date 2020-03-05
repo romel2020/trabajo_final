@@ -8,7 +8,7 @@
 
 
 Document.destroy_all
-Status.destroy_all
+Position.destroy_all
 Location.destroy_all
 
 
@@ -18,9 +18,9 @@ Document.create(name: '16-30')
 Document.create(name: '31-50')
 Document.create(name: '51-100')
 
-Status.create(name: 'Dueño')
-Status.create(name: 'Contador')
-Status.create(name: 'RR.HH')
+Position.create(name: 'Dueño')
+Position.create(name: 'Contador')
+Position.create(name: 'RR.HH')
 =begin
 Location.create(name: 'Arica')
 Location.create(name: 'Arica',city: Location.find_by_name('Arica'))

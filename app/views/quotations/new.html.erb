@@ -1,8 +1,10 @@
  <div class=" fondo_formulario">
         <%= render 'form', quotation: @quotation %>
-
-
-        <%= link_to 'Desea enviar una nueva cotizacion', quotations_new_path %><br>
+  <table class="pt-5">
+     <tr>
+       <td><%= link_to 'Nueva', quotations_new_path, class:"btn btn-outline-light btn-primary text-center" %></td>
         
-        <%= link_to 'Home', homes_index_path %>
+        <td><%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %></td>
+      </tr>
+   </table>   
   </div>

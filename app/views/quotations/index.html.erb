@@ -1,7 +1,5 @@
 <div class=" fondo_formulario">
-
-   
-      
+ 
     <h1 class='text-center'>Cotizaciones</h1>
 
     <div class='table-responsive margen_abajo'>
@@ -18,25 +16,27 @@
           <th>En que te puedo ayudar</th>
           <th>Fecha de creación</th>
           <th>Borrar</th>
+          <th>Mostrar</th>
           <th>Cotizar</th>
-          <th colspan="11"></th>
+          <th colspan="12"></th>
         </tr>
       </thead>
 
       <tbody>
-        <% @quotation.each do |quotation| %>
+        <% @quotations.each do |quotation| %>
         <% if quotation.status == false %>
           <tr class="bg-danger">
             <td><%= quotation.name %></td>
             <td><%= quotation.last_name %></td>
             <td><%= quotation.phone %></td>
             <td><%= quotation.email %></td>
-            <td><%= quotation.status.name %></td>
+            <td><%= quotation.position.name %></td>
             <td><%= quotation.compañy_size %></td>
             <td><%= quotation.document.name %></td>
             <td><%= quotation.help_you%></td>
             <td><%= quotation.created_at%></td>
-            <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', delete_quotation_path(quotation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', quotation_show_path(quotation) %></td>
             <td><%= link_to 'Cotizar', quotation_status_path(quotation), method: :patch %></td>
           </tr>
         <% else %>
@@ -45,12 +45,13 @@
             <td><%= quotation.last_name %></td>
             <td><%= quotation.phone %></td>
             <td><%= quotation.email %></td>
-            <td><%= quotation.status.name %></td>
+            <td><%= quotation.position.name %></td>
             <td><%= quotation.compañy_size %></td>
             <td><%= quotation.document.name %></td>
             <td><%= quotation.help_you%></td>
             <td><%= quotation.created_at%></td>
-            <td><%= link_to 'Destroy', quotation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', delete_quotation_path(quotation), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', quotation_show_path(quotation) %></td>
             <td><%= link_to 'Cotizado', quotation_status_path(quotation), method: :patch %></td>
           </tr>
         <% end %>
