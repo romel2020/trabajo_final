@@ -10,6 +10,19 @@
 Document.destroy_all
 Position.destroy_all
 Location.destroy_all
+User.destroy_all
+
+User.create(
+    email: 'otoro@eldescuevee.cl',
+    password: '123456',
+    admin: true
+)
+
+User.create(
+    email: 'osed.td@gmail.com',
+    password: '123456',
+    admin: false
+)
 
 
 Document.create(name: 'Sin información')

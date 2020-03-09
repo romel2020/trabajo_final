@@ -59,7 +59,7 @@ class QuotationsController < ApplicationController
     end
 
     def login
-        render layout: "login"
+        render layout: "nav_admin"
     end
     
     

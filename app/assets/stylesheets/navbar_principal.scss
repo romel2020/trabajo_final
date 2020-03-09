@@ -1,0 +1,107 @@
+.contenedor-nav {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 480px) {
+      .contenedor-nav {
+          width: 95%;
+      }
+  }
+  @media screen and (min-width: 768px) {
+    .contenedor-nav {
+        width: 90%;
+    }
+}   
+
+@media screen and (min-width: 992px) {
+    .contenedor-nav {
+        width: 90%;
+       
+    }
+}
+
+
+    div.barra {
+     background-color: #292626;
+     padding: 20px 0;
+    }
+
+    div.logo {
+        width: 80%;
+    }
+
+@media screen and (min-width: 768px) {
+   
+    div.logo {
+        width: 33%;
+        float: left;
+        }
+    }
+
+    nav.navegacion-principal {
+     display:none;
+    }
+
+    .borderr {
+
+        border: green 2px solid;
+    }
+
+    nav.navegacion-principal td {
+        font-family: 'Oswald', sans-serif;
+        color: white;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all.6s ease;
+        height: 60px;
+      
+    }
+
+    .nav-td {
+        width: 140px;
+        
+    }
+
+    nav.navegacion-principal td:hover {
+     background:green;
+    
+
+    }
+
+    
+       
+    nav.navegacion-principal td:last-child:hover {
+       
+        color: green;
+        }
+
+
+    @media screen and (min-width: 768px) {
+   
+        nav.navegacion-principal {
+            width: 67%;
+            float: right;
+            text-align: right;
+            display: block
+            
+            
+            }
+            nav.navegacion-principal td {
+                margin-right: 10px;
+                padding: 10px 10px;
+                display: inline-block;
+                padding-top: 13px;
+
+            }
+
+
+
+        }
+    
+
+
+
+
+

@@ -1,22 +1,50 @@
-<nav class='fix-top'>
-         
-        <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <%= image_tag("eldescueve.png", :alt => "idea")%>
-         <hr>
-        <ul>
-                    
-                    <li><%= link_to 'Consulta', quotations_index_path  %></li>
-                    <li><%= link_to 'Crear empresa', new_company_path %></li>
-                    <li><%= link_to 'Sign_out', destroy_user_session_path, method: :delete %></li>
-                    
-            </ul>
-            
+ <div class="barra">
+     <div class="contenedor-nav clearfix">
+       <div class="logo">
+           <%= image_tag("eldescueve.png", :alt => "idea")%>
+       </div>
+        <div class="menu-movil">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
 
         </div>
-
-        <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776; Menú</button>
-        </div>
-        
-</nav>
+        <nav class="navegacion-principal  ">
+            <table>   
+             <tr>
+              <td class="text-width">
+                 <%= link_to 'Administrador', quotations_login_path if user_signed_in? && current_user.admin == true %>
+              </td>
+              <td class="text-width">
+                 <%= link_to 'Empresa  ', user_session_path if user_signed_in?  %>
+              </td>
+                 <td><%= link_to 'Planes ',homes_planes_path, :id => "confiar"%></td>
+                 <td><%= link_to 'Cotización  ', quotations_new_path, remote: true %></td>
+                 <td  class="borderr nav-td"><%= link_to 'Contactanos  ',homes_new_path,  remote: true %></td>
+                 <td><div class="dropdown float-right">
+                      <a class="btn btn-signin dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <% if user_signed_in?%>
+                          <%= truncate(current_user.email, length: 15)%>
+                        <% else %>
+                          Ingreso
+                        <% end %>
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink select">
+                          <% if user_signed_in? %>
+                          <%= link_to "Mi Perfil",  edit_user_registration_path, class:"dropdown-item" %>
+                          <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+                        <% else %>
+                          <%= link_to "Ingreso", new_user_session_path, class:"dropdown-item" %>
+                          <%= link_to "Registro", new_user_registration_path, class:"dropdown-item" %>
+                        <% end %>
+                      </div>
+                    </div>
+                    </td>
+             </tr>  
+            </table>    
+        </nav> 
+      </div>
+    </div>

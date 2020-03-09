@@ -1,16 +1,36 @@
-
-
-
-<%= video_tag "video1.mp4", :controls => true,  autoplay: true, :loop => true, class: 'videotag' %>
-<div class='text-p5'>
-<%= link_to 'Bienvenidos', homes_index_path,class:"btn btn-outline-light btn-lg" %>
+<div class="fon_home">
+<nav>
+<div class="dropdown float-right">
+  <a class="btn btn-signin dropdown-toggle text-danger" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <% if user_signed_in?%>
+      <%= truncate(current_user.email, length: 15)%>
+    <% else %>
+      Ingreso
+    <% end %>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink select">
+      <% if user_signed_in? %>
+      <%= link_to "Mi Perfil",  edit_user_registration_path, class:"dropdown-item" %>
+       <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
+     <% else %>
+       <%= link_to "Ingreso", new_user_session_path, class:"dropdown-item" %>
+       <%= link_to "Registro", new_user_registration_path, class:"dropdown-item" %>
+     <% end %>
+  </div>
 </div>
-<p class='p1'>
-  
-  <span class='text-center'>
-    EL DESCUEVE
-  </span>
-  </p>
+</nav>
+
+
+
+    <div class="cont_home">
+    <h1 >    Bienvenido         </h1>
+    <h2>         a              </h2>
+    <h2>     EL DESCUEVE        </h2>
+    <h2>________________________</h2><br><br>
+    <%=link_to 'Ingresa', homes_index_path%>
+   </div>
+ </div>
+
 
 
 

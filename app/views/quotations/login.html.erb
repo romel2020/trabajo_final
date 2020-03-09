@@ -1,10 +1,18 @@
-<div class="banner">
-    <div class="contentt">
-    <h1 >    Bienvenido         </h1>
-    <h2>         a              </h2>
-    <h2>     EL DESCUEVE</h2>
-    <h2>________________________</h2><br><br>
-   
-   </div>
- </div>
+
+   <div class="programa">
+        <div class="contenedor-video">
+          <%= video_tag "video4.mp4", :controls => false,  autoplay: true, :loop => true %>
+          </div>
+          <div class="text-center contenido">
+            <table class="pt-5">
+              <tr>
+                <td><%= link_to 'Nueva', quotations_new_path, class:"btn btn-outline-light btn-primary text-center" %></td>
+                  
+                  <td><%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %></td>
+                </tr>
+            </table>   
+       </div>
+      </div>
+ 
+
 

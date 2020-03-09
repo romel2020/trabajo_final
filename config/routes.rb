@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'homes/index'
   get 'homes/about', to:'homes#about'
   get 'homes/planes', to:'homes#planes'
+  get 'homes/new', to:'homes#new'
   get 'quotations/index'
   get 'quotations/:id/show', to: 'quotations#show', as:'quotation_show'
   get 'quotations/new'

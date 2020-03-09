@@ -1,0 +1,89 @@
+
+.fon_home {
+position: relative;
+width: 100%;
+height: 100%;
+background-size: cover;
+background-position: center;
+transition: a11 .1s ease-in-out;
+background-image: image-url("fondo.jpeg");
+background-repeat: no-repeat;
+animation: fon_home 15s infinite linear;
+
+}
+
+.cont_home {
+
+ height: 1000px;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+ color: rgb(255, 255, 255);
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+.cont_home a {
+
+    text-decoration: none;
+    color: #FFF;
+    padding: 9px 20px;
+    border: 1px solid #FFF;
+    text-transform: uppercase;
+    transition: a11 .1s ease-in-out;
+}
+
+.cont_home a:hover {
+
+    background-color: rgb(20, 18, 18);
+    color: #333;
+}
+
+@keyframes fon_home {
+
+    0% {
+        background-image: image-url("fondo.jpeg");
+        background-repeat: no-repeat;
+    }
+
+    25% {
+        background-image: image-url("fondo.jpg");
+        background-repeat: no-repeat;
+
+    }
+
+    26% {
+        background-image: image-url("fondo1.jpg");
+        background-repeat: no-repeat;
+    }
+
+    50% {
+        background-image: image-url("fondo1.jpg");
+        background-repeat: no-repeat;
+    }
+
+    51% {
+        background-image: image-url("fondo2.jpg");
+        background-repeat: no-repeat;
+    }
+
+    75% {
+        background-image: image-url("fondo2.jpg");
+        background-repeat: no-repeat;
+    }
+
+    76% {
+        background-image: image-url("fondo3.jpg");
+        background-repeat: no-repeat;
+    }
+
+    100% {
+        background-image: image-url("fondo3.jpg");
+        background-repeat: no-repeat;
+    }
+
+}
+

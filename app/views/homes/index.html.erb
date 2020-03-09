@@ -1,12 +1,132 @@
-<div class="banner">
-    <div class="contentt">
-    <h1 >    Bienvenido         </h1>
-    <h2>         a              </h2>
-    <h2>     EL DESCUEVE</h2>
-    <h2>________________________</h2><br><br>
-    <%=link_to 'Conocenos', homes_about_path%>
-   </div>
- </div>
+
+  
+       <div class="seccion bar">
+         <h2> Somos el partner que necesita tu emprendmineto</h2>
+         <p>
+         Somos un grupo de profesionales que poyamos el crecimiento de las pequeñas y medianas empresas desde el año 2018 , a través de la innovación y soluciones tecnológicas para mejorar los procesos de las personas.
+         A todos nos ha pasado, hay días en los que las cosas no suceden como lo esperamos y nuestra motivación comienza a desmoronarse, pero no te preocupes porque en El DEscuevee encontaras el apoyo que necesitas.Antes de conseguir el éxito, enfrentarás muchas derrotas. Es normal, no te desanimes.
+         Seremos el partner que te acompañara desde el inicio de tu idea hasta concretar tu proyecto.No dejes nada para después. ¡Empieza hoy!
+         </p>
+      </div>
+   
+         <div class="row mt-5 margen">
+            <div class="col-5">
+                <h2 class="text-h">Transformando el desarrollo de las empresas</h2><br>
+                <p class='text-p text-justify'>Te asesoramos en todos los procesos y pilares fundamentales en la administración de tu empresa o negocio, para que así puedas tomar la mejor decisión y hacerla crecer.</p>
+                <p class='text-p text-justify'>Si deseas dar a conocer tu empresa al mundo, la mejor manera de hacerlo es creando una plataforma web. Para ello te asesoramos en el diseño e implementación de tu sitio.</p>
+                <p class='text-p text-justify'>¿Por qué conformarse con soluciones genéricas y poco escalables? Convertimos su necesidad o idea en una solución real y escalable.</p>           
+                <p class='text-p text-justify'>Nos convertimos en su socio estratégico para el apoyo y asesoría permanente para mejorar el área de soporte informático, proponiendo soluciones tecnológicas al alcance.</p>
+                <p class='text-p'>Confia en nosotros</p>
+                <p class='text-p'>Atte</p>
+                <p class='text-p'>Oscar Toro Diaz</p>
+                <p class='text-p'> CEO & SCRUM MASTER</p><br>
+            </div>
+             <div class="col-1">
+              
+            </div>
+            <div class="col-6">
+              <%= image_tag("idea.png", size: "600x550",:alt => "idea") %>
+            </div>
+       </div>
+      <div class="programa">
+        <div class="contenedor-video">
+          <%= video_tag "video3.mp4", :controls => false,  autoplay: true, :loop => true %>
+          </div>
+      </div>
+      
+        <div class="seccion bar">
+         <h2> Planes Tributario y contable según tu necesidad</h2>
+         <p>
+         Las pequeñas y medianas empresas tienen una estructura que no justifica la creación de un departamento de contabilidad. Con nuestros planes puedes invertir más tiempo en la planeación táctica y estratégica de tu negocio.
+        </p>
+       </div>
+     
+  
+      
+        <div class="contenedor">
+            <div class="contenedor_tarjeta">
+             
+              <figure>
+                    <%= image_tag("prueba8.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
+                  <figcaption class="trasera">
+                    <h2>Plan Básico</h2>
+                    <hr>
+                    <p>- 15 documentos Tributarios</p>
+                    <p>- Formulario número 29 (SII)</p>
+                    <p>- Registros de Compras y Ventas</p>
+                    <p>- Balance Tributario</p>
+                    <p>- Declaración de Renta Anual</p>
+                    <br>
+                    <p>ANTES<del> $29.990 </del></p>
+                    <p>AHORA $14.990 </p>
+                    <br>
+                    <div class="text-center">
+                    <a href='https://www.flow.cl/btn.php?token=57hfy5s' target='_blank'>
+                      <img src='https://www.flow.cl/img/botones/btn-pagar-celeste.png'>
+                    </a>
+                    </div>          
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="contenedor_tarjeta">
+
+                <figure>
+                      <%= image_tag("prueba7.jpg",class: "frontal", size: "300x400",:alt => "idea") %>
+                    <figcaption class="trasera">
+                      <h2>Plan Emprendedor</h2>
+                      <hr>
+                        <p>- Hasta 4 Trabajadores </p>
+                        <p>- 30 Documentos Tributarios</p>
+                        <p>- Contratos del Personal</p>
+                        <p>- Remuneraciones e imposiciones</p>
+                        <p>- Formulario número 29 (SII)</p>
+                        <p>- Registros de Compras y Ventas</p>
+                        <p>- Balance Tributario</p>
+                        <p>- Declaración de Renta Anual</p>
+                        <br>
+                        <p>ANTES<del> $59.990 </del></p>
+                        <p>AHORA $29.990 </p>
+                        <br>
+                        <div class="text-center">
+                        <a href='https://www.flow.cl/btn.php?token=bx2bx8p' target='_blank'>
+                          <img src='https://www.flow.cl/img/botones/btn-pagar-celeste.png'>
+                         </a>
+                        </div>
+                        
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="contenedor_tarjeta">
+
+                    <figure>
+                          <%= image_tag("prueba6.jpg",class: "frontal", size: "300x400",:alt => "idea") %>
+                        <figcaption class="trasera">
+                          <h2>Plan Pyme</h2>
+                          <hr>
+                                    
+                            <p>- Hasta 10 Trabajadores</p>
+                            <p>- 50 Documentos Tributarios</p>
+                            <p>- Contratos del Personal</p>
+                            <p>- Remuneraciones e imposiciones</p>
+                            <p>- Formulario número 29 (SII)</p>
+                            <p>- Registros de Compras y Ventas</p>
+                            <p>- Balance Tributario</p>
+                            <p>- Declaración de Renta Anual</p>
+                            <br>
+                            <p>ANTES<del> $119.990 </del></p>
+                            <p>AHORA $59.990 </p>
+                            <br>
+                            <div class="text-center">
+                              <a href='https://www.flow.cl/btn.php?token=mvnph7n' target='_blank'>
+                                <img src='https://www.flow.cl/img/botones/btn-pagar-celeste.png'>
+                              </a>
+                            </div>
+                        </figcaption>
+                      </figure>
+                </div>
+            </div>
+        </div>
+               
 
 <div class="flex">
     
@@ -44,97 +164,36 @@
   </div>
      
 
-
-
-
-   <div id='confiar'>
-         <div class="container">
-              <h2 class="display-4  font-weight-bold mb-5 text-center"> 6 Motivos para confiar en nosotros</h2>
-          </div>
-    </div>
-
-
-
-      <div class="contenedor">
-          <div class="contenedor_tarjeta">
-
-        <figure>
-              <%= image_tag("confiar1.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
-            <figcaption class="trasera">
-              <h2>EFECTIVIDAD</h2>
-              <hr>
-              <p>Te ayudamos a combinar en forma permanente  la eficacia, eficiencia y efectividad. Estos términos se utilizan con frecuencia en el ámbito de los negocios para garantizar una gestión adecuada y alcanzar los objetivos trazados</p>
-            </figcaption>
-          </figure>
-          </div>
-          <div class="contenedor_tarjeta">
-
-        <figure>
-              <%= image_tag("confiar2.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
-            <figcaption class="trasera">
-              <h2>TRANSPARENCIA</h2>
-              <hr>
-              <p>Garantizamos el acceso a toda la informacion de tu negocio y a controlar los aspectos financieros de tú empresa para que ésta cumpla con su misión y visión, con la participación de todas las personas de la organización.</p>
-            </figcaption>
-          </figure>
-          </div>
-          <div class="contenedor_tarjeta">
-
-        <figure>
-              <%= image_tag("confiar3.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
-            <figcaption class="trasera">
-              <h2>RIESGOS ACOTADOS</h2>
-              <hr>
-              <p>Proligidad en los informes, los procesos contables y tributarios para poder encontrar a tiempo algun inconveniente en la empresa y darle solución</p>
-            </figcaption>
-          </figure>
-          </div>
-          <div class="contenedor_tarjeta">
-
-        <figure>
-              <%= image_tag("confiar4.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
-            <figcaption class="trasera">
-              <h2>CAPACIDAD ADAPTATIVA</h2>
-              <hr>
-              <p>Somos flexibles en la gestion de tu empresa y  te ayudamos a modificar, cambiar y hacer eficiente un proceso para acomodarse a la nueva realidad según corresponda</p>
-            </figcaption>
-          </figure>
-          </div>
-          <div class="contenedor_tarjeta">
-
-        <figure>
-              <%= image_tag("confiar5.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
-            <figcaption class="trasera">
-              <h2>APOYO PERMANENTE</h2>
-              <hr>
-              <p>Comunicacion permanente para aclarar dudas e ir actualizando procesos periodicamente</p>
-            </figcaption>
-          </figure>
-          </div>
-          <div class="contenedor_tarjeta">
-
-        <figure>
-              <%= image_tag("confiar6.jpg",class: "frontal", size: "300x350",:alt => "idea") %>
-            <figcaption class="trasera">
-              <h2>SIMPLICIDAD & CONTROL</h2>
-              <hr>
-              <p>Auditorias permanentes y desarrollo de informes claros y entendibles para tomar desiciones más concretas con respecto a la reaalidad de tú negocio</p>
-            </figcaption>
-          </figure>
+       <div class="seccion bar">
+         <h2>El momento de la digitalizacion llegó y te podemos ayudar </h2>
+         <p>
+          Juntemonos a tomar un cafe, para que nos cuentes tus proyectos y con gusto te ayudaremos.Recuerda que la digitalización llego para quedarse y con nuestra asesoria podras realizar todos los cambios necesarios
+          Confia en nosotros
+        </p>
+       </div>
+       <div class="programa">
+        <div class="contenedor-video">
+          <%= video_tag "video4.mp4", :controls => false,  autoplay: true, :loop => true %>
           </div>
       </div>
 
-  
+       
 
-<div class="container">
-        <div class="row pt-2 text-center">
-            <div class="col-12">
-                <h2 class="display-5  font-weight-bold text-center"> El momento de la digitalizacion llegó y te lo mostramos aqui</h2>
-                <%= video_tag "digitalizacion.mp4", :controls => true,  autoplay: false, :loop => true, size: "600x700" %>
-                         
-              </div>
-         </div>
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Formulario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
     </div>
-
+  </div>
+</div>
  
 
