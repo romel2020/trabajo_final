@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'devise'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 
 # Use Puma as the app server

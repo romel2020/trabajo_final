@@ -1,5 +1,6 @@
 class QuotationsController < ApplicationController
     before_action :authenticate_user!, only: [:login ]
+   
     def index
      
         @quotations = Quotation.all.reverse
@@ -25,8 +26,12 @@ class QuotationsController < ApplicationController
     def create
         
         @quotation = Quotation.new(quotation_params)
-        @quotation.save
-        redirect_to quotation_show_path(@quotation)
+        if verify_recaptcha(@quotation) && @quotation.save
+          redirect_to quotation_show_path(@quotation), notice:"Sucotización fue enviada con exito"
+        else
+           flash.now[:error] = "La cotizaciòn no fue enviada"
+           redirect_to homes_index_path
+        end
     end
     
     def edit 
@@ -72,6 +77,7 @@ class QuotationsController < ApplicationController
         params.require(:quotation).permit(:name, :last_name, :phone,:email, :compañy_size, :help_you, :position_id, :document_id, :status)
       end
 
+      
      
 
 end
