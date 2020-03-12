@@ -11,6 +11,9 @@ Document.destroy_all
 Position.destroy_all
 Location.destroy_all
 User.destroy_all
+Afp.destroy_all
+Groupo.destroy_all
+Health.destroy_all
 
 User.create(
     email: 'otoro@eldescuevee.cl',
@@ -24,6 +27,35 @@ User.create(
     admin: false
 )
 
+Afp.create(name:'Capital')
+Afp.create(name:'Cuprum')
+Afp.create(name:'Habitad')
+Afp.create(name:'PlanVital')
+Afp.create(name:'Provida')
+Afp.create(name:'Modelo')
+Afp.create(name:'Uno')
+Afp.create(comision:'11,44')
+Afp.create(comision:'11,44')
+Afp.create(comision:'11,27')
+Afp.create(comision:'11,16')
+Afp.create(comision:'11,45')
+Afp.create(comision:'10,77')
+Afp.create(comision:'10,69')
+
+Groupo.create(cargo: 'Gerente de Servicios Administrativos')
+Groupo.create(cargo: 'Oficial de Servicios Administrativos')
+Groupo.create(cargo: 'Asistente Administrativa')
+Groupo.create(cargo: 'Coordinadora Administrativa')
+Groupo.create(cargo: 'Director Administrativo')
+Groupo.create(cargo: 'Gerente Administrativo')
+
+Health.create(name: 'Fonasa')
+Health.create(name: 'Banmèdica')
+Health.create(name: 'Consalud')
+Health.create(name: 'Colmena')
+Health.create(name: 'CruzBlanca')
+Health.create(name: 'NuevaMasVida')
+Health.create(name: 'VidaTres')
 
 Document.create(name: 'Sin información')
 Document.create(name: '0-15')

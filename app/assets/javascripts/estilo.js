@@ -9,3 +9,22 @@ function openNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
   }
+
+  (function($) {
+    $(document).ready(function() {
+        $.jScrollability([
+            {
+                'selector': '.slide-in-demo',
+                'start': 'parent',
+                'end': 'parent',
+                'fn': {
+                    'left': {
+                        'start': 100,
+                        'end': 0,
+                        'unit': '%'
+                    }
+                }
+            }
+        ]);
+    });
+})(jQuery);

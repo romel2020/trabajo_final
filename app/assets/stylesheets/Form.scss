@@ -14,8 +14,73 @@ margin-top: 0px;
 padding: 30px;
 box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
 position: relative;
+padding:16px;
+border-radius:10px;
+background-color:#ccc;
+
 
 }
+
+
+.formulario label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+.formulario input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+.formulario input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+.fotmulario textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -25,27 +90,7 @@ position: relative;
     color: rgba(0,0,0,0.7)
 }
 
-.formulario__input, .formulario__label,
-.formulario__submit {
-  display: block;
-  width: 100%;
-  font-size: 1.3em;
-}
 
-.formulario__input {
-    padding-left: 15px;
-    position: absolute;
-    margin-top: -85px;
-}
-
-.margen_form {
-    padding-top: 150px;
-    padding-bottom: 200px;
-    padding-left: 85px; 
-    font-size: 21px;
-    font-family: 'Times New Roman', Times, serif;
-    
-}
 
 
 
@@ -61,16 +106,6 @@ position: relative;
 
 
 
-.fondo_formulario {
-    
-    position: relative;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: image-url("cotizar.jpg");
-    background-repeat: no-repeat;
-
-}
 
 .fondo_formulario2 {
     

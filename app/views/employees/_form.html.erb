@@ -10,34 +10,34 @@
       </ul>
     </div>
   <% end %>
-
+<div class="formulario">
   <div class="field">
     <%= form.label :rut %>
     <%= form.text_field :rut %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :Nombre %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :father_name %>
+    <%= form.label :ApellidoP %>
     <%= form.text_field :father_name %>
   </div>
 
   <div class="field">
-    <%= form.label :mother_name %>
+    <%= form.label :ApellidoM %>
     <%= form.text_field :mother_name %>
   </div>
 
   <div class="field">
-    <%= form.label :date_ini %>
+    <%= form.label :Fecha_Inicio %>
     <%= form.text_field :date_ini %>
   </div>
 
   <div class="field">
-    <%= form.label :nationality %>
+    <%= form.label :Nacionalidad %>
     <%= form.text_field :nationality %>
   </div>
 
@@ -45,14 +45,17 @@
     <%= form.label :sexo %>
     <%= form.text_field :sexo %>
   </div>
-
+ <!-- <%# <div class="field">
+    <%#= form.label :location_id, " Localidad"%>
+     <%#= form.select :location, options_for_select(@cities), prompt: 'select an option' %>
+ <%#  </div> %> -->
   <div class="field">
-    <%= form.label :address %>
+    <%= form.label :Direccion %>
     <%= form.text_field :address %>
   </div>
 
   <div class="field">
-    <%= form.label :phone_fix %>
+    <%= form.label :Celular %>
     <%= form.text_field :phone_fix %>
   </div>
 
@@ -74,4 +77,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>

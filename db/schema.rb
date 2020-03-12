@@ -71,12 +71,10 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
   end
 
   create_table "documents", force: :cascade do |t|
-    t.bigint "document_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
     t.bigint "quotation_id"
-    t.index ["document_id"], name: "index_documents_on_document_id"
     t.index ["quotation_id"], name: "index_documents_on_quotation_id"
   end
 
@@ -199,7 +197,6 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
   add_foreign_key "companies", "locations"
   add_foreign_key "companies", "mutuals"
   add_foreign_key "credits", "laboralrelations"
-  add_foreign_key "documents", "documents"
   add_foreign_key "documents", "quotations"
   add_foreign_key "employees", "laboralrelations"
   add_foreign_key "groupos", "laboralrelations"
