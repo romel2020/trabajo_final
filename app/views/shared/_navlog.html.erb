@@ -12,7 +12,7 @@
           <span></span>
 
         </div>
-        <nav class="navegacion-principal  ">
+        <nav class="navegacion-principal   ">
             <table>   
              <tr>
               <td class="text-width">
@@ -36,21 +36,19 @@
     <ul class="navbar-nav ">
 
                      <td><div class="dropdown float-right">
-                      <a class="btn btn-signin dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="btn btn-signin  text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <% if user_signed_in?%>
                           <%= truncate(current_user.email, length: 15)%>
                         <% else %>
-                          Ingreso
+                          <%= link_to image_tag('login.svg',width:'40'), new_user_session_path %>
                         <% end %>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink select">
                           <% if user_signed_in? %>
-                          <%= link_to "Mi Perfil",  edit_user_registration_path, class:"dropdown-item" %>
                           <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
                         <% else %>
-                          <%= link_to "Ingreso", new_user_session_path, class:"dropdown-item" %>
-                          <%= link_to "Registro", new_user_registration_path, class:"dropdown-item" %>
-                        <% end %>
+                          <%= link_to image_tag('login.svg'), new_user_session_path %>
+                         <% end %>
                       </div>
                     </div>
                     </td>
