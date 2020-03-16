@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :contacts
-  resources :employees
-  resources :laboralrelations
+  resources :employees do
+    resources :laboralrelations 
+  end
+  resources :laboralrelations, only: :index
   resources :credits
   resources :companies
   resources :positions

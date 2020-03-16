@@ -1,5 +1,6 @@
 <h1>New Laboralrelation</h1>
+<p><%= @employee.name %></p>
 
-<%= render 'form', laboralrelation: @laboralrelation %>
+<%= render 'form', laboralrelation: @laboralrelation, employee: @employee %>
 
 <%= link_to 'Back', laboralrelations_path %>

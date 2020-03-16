@@ -1,4 +1,4 @@
-<%= form_with(model: laboralrelation, local: true) do |form| %>
+<%= form_with(model:[employee, laboralrelation], local: true) do |form| %>
   <% if laboralrelation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(laboralrelation.errors.count, "error") %> prohibited this laboralrelation from being saved:</h2>
@@ -25,6 +25,16 @@
     <%= form.label :date_finish %>
     <%= form.text_field :date_finish %>
   </div>
+ <div class="field">
+    <%= form.label :afp_id,"AFP" %>
+    <%= form.select :afp_id, options_for_select(@afp), prompt: 'select an option' %>
+  </div>
+  
+    <div class="field">
+    <%= form.label :health_id,"Salud" %>
+    <%= form.select :health_id, options_for_select(@salud), prompt: 'select an option' %>
+  </div> 
+   
 
   <div class="field">
     <%= form.label :base_salary %>

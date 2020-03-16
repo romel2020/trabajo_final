@@ -14,7 +14,11 @@ class LaboralrelationsController < ApplicationController
 
   # GET /laboralrelations/new
   def new
+    @employee = Employee.find(params[:employee_id])
     @laboralrelation = Laboralrelation.new
+    @afp = Afp.pluck(:name,:id)
+    @salud = Health.pluck(:name,:id)
+    
   end
 
   # GET /laboralrelations/1/edit
@@ -25,13 +29,14 @@ class LaboralrelationsController < ApplicationController
   # POST /laboralrelations.json
   def create
     @laboralrelation = Laboralrelation.new(laboralrelation_params)
-
+    @laboralrelation.employee = Employee.find(params[:employee_id])
+    
     respond_to do |format|
       if @laboralrelation.save
         format.html { redirect_to @laboralrelation, notice: 'Laboralrelation was successfully created.' }
         format.json { render :show, status: :created, location: @laboralrelation }
       else
-        format.html { render :new }
+        format.html { redirect_to new_employee_laboralrelation_path, notice: @laboralrelation.errors}
         format.json { render json: @laboralrelation.errors, status: :unprocessable_entity }
       end
     end
@@ -69,6 +74,6 @@ class LaboralrelationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def laboralrelation_params
-      params.require(:laboralrelation).permit(:undefined, :date_ini, :date_finish, :base_salary, :status)
+      params.require(:laboralrelation).permit(:undefined, :date_ini, :date_finish, :base_salary, :status, :employee_id, :afp_id, :health_id)
     end
 end

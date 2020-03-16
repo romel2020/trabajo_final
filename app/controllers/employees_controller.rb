@@ -4,12 +4,13 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    @contract = Employee.where(company_id: current_user.company_id)
   end
 
   # GET /employees/1
   # GET /employees/1.json
   def show
+
   end
 
   # GET /employees/new
@@ -25,16 +26,22 @@ class EmployeesController < ApplicationController
   # POST /employees.json
   def create
     @employee = Employee.new(employee_params)
-
-    respond_to do |format|
+    @employee.company_id = current_user.company.id
+    @employee.user_id    = current_user.id
+    create = params[:employee][:contrato]
+    create.inspect
       if @employee.save
-        format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
-        format.json { render :show, status: :created, location: @employee }
+          if create == '1'
+              redirect_to new_employee_laboralrelation_path(@employee)
+          else
+            redirect_to @employee
+          end
+         
       else
-        format.html { render :new }
-        format.json { render json: @employee.errors, status: :unprocessable_entity }
+         render :new 
+       
       end
-    end
+    
   end
 
   # PATCH/PUT /employees/1

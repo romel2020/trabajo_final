@@ -14,6 +14,10 @@ User.destroy_all
 Afp.destroy_all
 Groupo.destroy_all
 Health.destroy_all
+AdminUser.destroy_all
+
+AdminUser.create!(email: 'admin@eldescuevee.cl', password: 'password', password_confirmation:
+    'password')
 
 User.create(
     email: 'otoro@eldescuevee.cl',
@@ -21,11 +25,7 @@ User.create(
     admin: true
 )
 
-User.create(
-    email: 'osed.td@gmail.com',
-    password: '123456',
-    admin: false
-)
+
 
 Afp.create(name:'Capital')
 Afp.create(name:'Cuprum')
@@ -34,13 +34,13 @@ Afp.create(name:'PlanVital')
 Afp.create(name:'Provida')
 Afp.create(name:'Modelo')
 Afp.create(name:'Uno')
-Afp.create(comision:'11,44')
-Afp.create(comision:'11,44')
-Afp.create(comision:'11,27')
-Afp.create(comision:'11,16')
-Afp.create(comision:'11,45')
-Afp.create(comision:'10,77')
-Afp.create(comision:'10,69')
+Afp.create(comision: 0.1144)
+Afp.create(comision: 0.1144)
+Afp.create(comision: 0.1127)
+Afp.create(comision: 0.1116)
+Afp.create(comision: 0.1145)
+Afp.create(comision: 0.1077)
+Afp.create(comision: 0.1069)
 
 Groupo.create(cargo: 'Gerente de Servicios Administrativos')
 Groupo.create(cargo: 'Oficial de Servicios Administrativos')
@@ -95,3 +95,4 @@ Location.create(name: 'Tocopilla')
 Location.create(name: 'Tocopilla',city: Location.find_by_name('Tocopilla'))
 Location.create(name: 'Maria Elena',city: Location.find_by_name('Calama'))
 =end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

@@ -4,7 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          has_many :quotations
-         has_many :companies
+         has_many :employees
+         belongs_to :company
+
 
          def after_sign_in_path_for(resource)
           stored_location_for(resource) || quotations_index_path

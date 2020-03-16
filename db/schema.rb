@@ -10,15 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_11_151656) do
+ActiveRecord::Schema.define(version: 2020_03_16_132336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "active_admin_comments", force: :cascade do |t|
+    t.string "namespace"
+    t.text "body"
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.string "author_type"
+    t.bigint "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
+    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
+    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  end
+
+  create_table "admin_users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_admin_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
   create_table "afps", force: :cascade do |t|
     t.string "name"
-    t.string "comision"
-    t.string "desc"
+    t.float "comision"
+    t.float "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "laboralrelation_id"
@@ -94,7 +120,11 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "laboralrelation_id"
+    t.bigint "company_id"
+    t.bigint "user_id"
+    t.index ["company_id"], name: "index_employees_on_company_id"
     t.index ["laboralrelation_id"], name: "index_employees_on_laboralrelation_id"
+    t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
   create_table "groupos", force: :cascade do |t|
@@ -107,8 +137,8 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
 
   create_table "healths", force: :cascade do |t|
     t.string "name"
-    t.string "comision"
-    t.string "desc"
+    t.float "comision"
+    t.float "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "laboralrelation_id"
@@ -188,6 +218,8 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+    t.bigint "company_id"
+    t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -198,7 +230,9 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
   add_foreign_key "companies", "mutuals"
   add_foreign_key "credits", "laboralrelations"
   add_foreign_key "documents", "quotations"
+  add_foreign_key "employees", "companies"
   add_foreign_key "employees", "laboralrelations"
+  add_foreign_key "employees", "users"
   add_foreign_key "groupos", "laboralrelations"
   add_foreign_key "healths", "laboralrelations"
   add_foreign_key "laboralrelations", "afps"
@@ -211,4 +245,5 @@ ActiveRecord::Schema.define(version: 2020_03_11_151656) do
   add_foreign_key "positions", "positions"
   add_foreign_key "quotations", "documents"
   add_foreign_key "quotations", "positions"
+  add_foreign_key "users", "companies"
 end

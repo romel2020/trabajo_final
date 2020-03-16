@@ -73,9 +73,14 @@
     <%= form.label :charges %>
     <%= form.text_field :charges %>
   </div>
+  <div class="field">
+    <%= form.label 'Crear contrato'%>
+    <%= form.check_box :contrato %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 </div>
 <% end %>
+
