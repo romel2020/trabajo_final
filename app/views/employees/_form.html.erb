@@ -45,10 +45,10 @@
     <%= form.label :sexo %>
     <%= form.text_field :sexo %>
   </div>
- <!-- <%# <div class="field">
-    <%#= form.label :location_id, " Localidad"%>
-     <%#= form.select :location, options_for_select(@cities), prompt: 'select an option' %>
- <%#  </div> %> -->
+ <div class="field">
+    <%= form.label :location_id, " Localidad"%>
+     <%= form.select :location, options_for_select(@cities), prompt: 'select an option' %>
+  </div> 
   <div class="field">
     <%= form.label :Direccion %>
     <%= form.text_field :address %>

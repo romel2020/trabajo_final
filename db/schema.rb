@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_132336) do
+ActiveRecord::Schema.define(version: 2020_03_16_184345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -122,8 +122,10 @@ ActiveRecord::Schema.define(version: 2020_03_16_132336) do
     t.bigint "laboralrelation_id"
     t.bigint "company_id"
     t.bigint "user_id"
+    t.bigint "location_id"
     t.index ["company_id"], name: "index_employees_on_company_id"
     t.index ["laboralrelation_id"], name: "index_employees_on_laboralrelation_id"
+    t.index ["location_id"], name: "index_employees_on_location_id"
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
@@ -232,6 +234,7 @@ ActiveRecord::Schema.define(version: 2020_03_16_132336) do
   add_foreign_key "documents", "quotations"
   add_foreign_key "employees", "companies"
   add_foreign_key "employees", "laboralrelations"
+  add_foreign_key "employees", "locations"
   add_foreign_key "employees", "users"
   add_foreign_key "groupos", "laboralrelations"
   add_foreign_key "healths", "laboralrelations"

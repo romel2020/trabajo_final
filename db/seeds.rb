@@ -10,7 +10,6 @@
 Document.destroy_all
 Position.destroy_all
 Location.destroy_all
-User.destroy_all
 Afp.destroy_all
 Groupo.destroy_all
 Health.destroy_all
@@ -19,11 +18,7 @@ AdminUser.destroy_all
 AdminUser.create!(email: 'admin@eldescuevee.cl', password: 'password', password_confirmation:
     'password')
 
-User.create(
-    email: 'otoro@eldescuevee.cl',
-    password: '123456',
-    admin: true
-)
+
 
 
 
@@ -66,7 +61,7 @@ Document.create(name: '51-100')
 Position.create(name: 'Dueño')
 Position.create(name: 'Contador')
 Position.create(name: 'RR.HH')
-=begin
+
 Location.create(name: 'Arica')
 Location.create(name: 'Arica',city: Location.find_by_name('Arica'))
 Location.create(name: 'Camarones',city: Location.find_by_name('Arica'))
@@ -94,5 +89,4 @@ Location.create(name: 'San Pedro de Atacama',city: Location.find_by_name('Calama
 Location.create(name: 'Tocopilla')
 Location.create(name: 'Tocopilla',city: Location.find_by_name('Tocopilla'))
 Location.create(name: 'Maria Elena',city: Location.find_by_name('Calama'))
-=end
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+
