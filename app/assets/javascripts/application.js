@@ -15,5 +15,5 @@
 //= require turbolinks
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
-//= require popper.js/dist/umd/popper.js
+//= require popper.js/dist/umd/popper
 //= require_tree .
