@@ -1,0 +1,5 @@
+$("#location").html("")
+<% @locations.each do |location|%>
+$("#location").append('<option value="'+ <%= location.id %> +'">'+ "<%= location.name %>" +'</option>')
+<% end %>
+

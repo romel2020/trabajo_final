@@ -46,8 +46,12 @@
     <%= form.text_field :sexo %>
   </div>
  <div class="field">
-    <%= form.label :location_id, " Localidad"%>
-     <%= form.select :location, options_for_select(@cities), prompt: 'select an option' %>
+    <%= form.label :location_id, " Ciudad"%>
+     <%= form.select :location, options_for_select(@cities), { prompt: 'select an option'}, id:"city" %>
+  </div> 
+  <div class="field">
+    <%= form.label :location_id, " Comuna"%>
+     <%= form.select :location, options_for_select(@cities), { prompt: 'select an option'}, id:"location" %>
   </div> 
   <div class="field">
     <%= form.label :Direccion %>
