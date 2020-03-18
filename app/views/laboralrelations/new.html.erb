@@ -1,6 +1,13 @@
-<h1>New Laboralrelation</h1>
-<p><%= @employee.name %></p>
+<div class="employee-form margen-bajo ">
+        <h1>Contrato del Trabajador</h1>
+          <h2><%= @employee.name %></h2>
+          <p class='text-center'> <%= current_user.company.name %></p>
+
 
 <%= render 'form', laboralrelation: @laboralrelation, employee: @employee %>
 
-<%= link_to 'Back', laboralrelations_path %>
+
+</div>
+<div class="employee-form">
+<%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+</div>

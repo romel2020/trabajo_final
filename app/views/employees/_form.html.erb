@@ -10,81 +10,86 @@
       </ul>
     </div>
   <% end %>
-<div class="formulario">
-  <div class="field">
-    <%= form.label :rut %>
-    <%= form.text_field :rut %>
-  </div>
+<div class='container'>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+                  
+                    <%= form.label "Rut" %>
+                    <%= form.text_field :rut,class: 'form-control', placeholder: '11111111-1',maxlength: 10, size: 10  %>
+            </div>
+            <div class="form-group col-md-4">
+                  
+                    <%= form.label "Nombre" %>
+                    <%= form.text_field :name,class: 'form-control', placeholder: 'Nombre',maxlength: 20,size: 20 %>
+            </div>
+            <div class="form-group col-md-4">
+                  
+                    <%= form.label "Apellido Paterno" %>
+                    <%= form.text_field :father_name,class: 'form-control', placeholder: 'Apellido 1',maxlength: 20,size: 20%>
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :Nombre %>
-    <%= form.text_field :name %>
-  </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+                    <%= form.label "Apellido Materno" %>
+                    <%= form.text_field :mother_name,class: 'form-control', placeholder: 'Apellido 2',maxlength: 20,size: 20 %>
+            </div>
+            <div class="form-group col-md-4">
+                    <%= form.label "Fecha Inicio" %>
+                    <%= form.date_field :date_ini,class: 'form-control', placeholder: '01/01/0001',maxlength: 10,size: 10 %>
+            </div>
+            <div class="form-group col-md-4">
+                    <%= form.label "Nacionalidad" %>
+                    <%= form.text_field :nationality,class: 'form-control', placeholder: 'Nacionalidad',maxlength: 20,size: 20 %>
+            </div>
+        </div>
 
-  <div class="field">
-    <%= form.label :ApellidoP %>
-    <%= form.text_field :father_name %>
-  </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                      <%= form.label "Sexo" %>
+                      <%= form.text_field :sexo,class: 'form-control', placeholder: 'F-M-I',maxlength: 1,size: 1 %>
+            </div>
+            <div class="form-group col-md-4">
+                      <%= form.label :location_id, " Ciudad"%>
+                      <%= form.select :location, options_for_select(@cities), { prompt: 'Ciudad'}, id:"city",class: 'form-control' %>
+            </div> 
+            <div class="form-group col-md-4">     
+                    <%= form.label :location_id, " Comuna"%>
+                    <%= form.select :location, options_for_select(@cities), { prompt: 'Comuna'}, id:"location",class: 'form-control' %>
+            </div> 
+        </div>  
+        <div class="form-row">
+          <div class="form-group col-md-4">
+                  <%= form.label "Direccion" %>
+                    <%= form.text_field :address,class: 'form-control', placeholder: 'Dirección',maxlength: 20,size: 20 %>
+          </div>
 
-  <div class="field">
-    <%= form.label :ApellidoM %>
-    <%= form.text_field :mother_name %>
-  </div>
+          <div class="form-group col-md-4">
+                    <%= form.label "Celular" %>
+                    <%= form.text_field :phone_fix,class: 'form-control', placeholder: '91111111',maxlength: 8,size: 8 %>
+          </div>
+          <div class="form-group col-md-4">
+                    <%= form.label "Teléfono Fijo" %>
+                    <%= form.text_field :phone,class: 'form-control', placeholder: '222222222',maxlength: 9,size: 9 %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">         
+                    <%= form.label "Email" %>
+                    <%= form.email_field :email,class: 'form-control', placeholder: 'xx@xx.xx' %>
+          </div>
+          <div class="form-group col-md-6">
+                    <%= form.label "Nº Cargas Familiares" %>
+                    <%= form.text_field :charges,class: 'form-control', placeholder: '0-9',maxlength: 1,size: 1 %>
+          </div>
+        </div>     
+                    <%= form.label 'Crear contrato'%>
+                    <%= form.check_box :contrato %>
+          
 
-  <div class="field">
-    <%= form.label :Fecha_Inicio %>
-    <%= form.text_field :date_ini %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Nacionalidad %>
-    <%= form.text_field :nationality %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sexo %>
-    <%= form.text_field :sexo %>
-  </div>
- <div class="field">
-    <%= form.label :location_id, " Ciudad"%>
-     <%= form.select :location, options_for_select(@cities), { prompt: 'select an option'}, id:"city" %>
-  </div> 
-  <div class="field">
-    <%= form.label :location_id, " Comuna"%>
-     <%= form.select :location, options_for_select(@cities), { prompt: 'select an option'}, id:"location" %>
-  </div> 
-  <div class="field">
-    <%= form.label :Direccion %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Celular %>
-    <%= form.text_field :phone_fix %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :charges %>
-    <%= form.text_field :charges %>
-  </div>
-  <div class="field">
-    <%= form.label 'Crear contrato'%>
-    <%= form.check_box :contrato %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+                  <div class="actions text-center">
+                    <%= form.submit "Enviar", class:"btn btn-primary actions" %>
+                  </div>
 </div>
 <% end %>
 

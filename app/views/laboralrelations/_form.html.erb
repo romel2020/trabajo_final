@@ -10,43 +10,41 @@
       </ul>
     </div>
   <% end %>
+<div class='container'>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+              <%= form.label "Fecha Inicio" %>
+              <%= form.date_field :date_ini,class: 'form-control', placeholder: '01/01/0001',maxlength: 10,size: 10 %>
+         </div>
+          <div class="form-group col-md-4">
+              <%= form.label "Fecha Inicio" %>
+              <%= form.text_field :date_finish,class: 'form-control', placeholder: '01/01/0001',maxlength: 10,size: 10 %>
+         </div>
+         <div class="form-group col-md-4">
+              <%= form.label :afp_id,"AFP" %>
+              <%= form.select :afp_id, options_for_select(@afp), { prompt: 'AFP'},class: 'form-control' %>
+        </div>
+       </div>
+     <div class="form-row">
+          <div class="form-group col-md-4">
+              <%= form.label :health_id,"Salud" %>
+              <%= form.select :health_id, options_for_select(@salud), { prompt: 'Seguro Salud' },class: 'form-control' %>
+          </div> 
+           <div class="form-group col-md-4">
+              <%= form.label "Sueldo Base" %>
+              <%= form.text_field :base_salary,class: 'form-control', placeholder: '0000000',maxlength: 7,size: 7 %>
+          </div>
+          <div class="form-group col-md-4">
+                <%= form.label "Estado" %>
+                <%= form.text_field :status,class: 'form-control', placeholder: 'Activo',maxlength: 7,size: 7 %>
+         </div>
+     </div>
+           <%= form.label "Contrato Indefinido" %>
+           <%= form.check_box :undefined %>
 
-  <div class="field">
-    <%= form.label :undefined %>
-    <%= form.check_box :undefined %>
-  </div>
+                  <div class="actions text-center">
+                    <%= form.submit "Enviar", class:"btn btn-primary actions" %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :date_ini %>
-    <%= form.text_field :date_ini %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date_finish %>
-    <%= form.text_field :date_finish %>
-  </div>
- <div class="field">
-    <%= form.label :afp_id,"AFP" %>
-    <%= form.select :afp_id, options_for_select(@afp), prompt: 'select an option' %>
-  </div>
-  
-    <div class="field">
-    <%= form.label :health_id,"Salud" %>
-    <%= form.select :health_id, options_for_select(@salud), prompt: 'select an option' %>
-  </div> 
-   
-
-  <div class="field">
-    <%= form.label :base_salary %>
-    <%= form.text_field :base_salary %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
   </div>
 <% end %>

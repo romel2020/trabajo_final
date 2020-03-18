@@ -1,8 +1,14 @@
-<h1>Nuevo Trabajador</h1>
-<p>de la compañia</p>
-<%= current_user.company.name %>
 
+<div class="employee-form">
+        <h1>Ingreso Trabajador</h1>
+    <div class='bienvenido'>
+        <p>TE DAMOS LA BIENVENIDA A LA EMPRESA</p>
+       <p class='text-center'> <%= current_user.company.name %></p>
+    </div>
 
 <%= render 'form', employee: @employee %>
 
+<div class="pb-5 pl-3">
  <%= link_to 'Home', homes_index_path , class:"btn btn-outline-light btn-primary text-center" %>
+</div>
+</div>
