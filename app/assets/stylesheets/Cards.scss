@@ -4,8 +4,12 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    
 }
-
+.fondo-card {
+    
+    background-color: #8360c3;
+}
 .contenedor {
     max-width: 1200px;
     margin: 50px auto;
@@ -13,6 +17,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .contenedor_tarjeta {

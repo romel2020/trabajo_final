@@ -1,0 +1,61 @@
+div.invitados ul {
+    list-style: none;
+    margin-left: 250px;
+    padding: 0;
+}
+
+ul.lista-equipo li {
+    padding: 10px;
+    float: left;
+}
+
+@media only screen and (min-width:480px) {
+    ul.lista-equipo li {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    ul.lista-equipo li {
+        width: 33.3%;
+    }
+}
+
+div.equipos {
+    position: relative;
+    overflow: hidden;
+}
+
+div.equipos img {
+    max-width: 100%;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .5s ease-in-out;
+}
+
+div.equipos:hover img {
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.1);
+    
+}
+
+div.equipos h6 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: rgba(0,0,0, 0.55);
+    width: 56.4%;
+    height: 20%;
+    text-align: left;
+    font-family: 'Oswail', sans-serif;
+    color: #fe4918;
+    text-transform: uppercase;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+div.equipos:hover h6 {
+    bottom: -80px;
+    opacity: 0;
+}

@@ -29,23 +29,25 @@
 
     div.logo {
         width: 80%;
+        float: left;
     }
 
 @media screen and (min-width: 768px) {
    
     div.logo {
         width: 33%;
-        float: left;
+        
         }
     }
 
-    nav.navegacion-principal {
-     display:none;
-    }
+  
 
     .borderr {
 
         border: green 2px solid;
+    }
+    nav.navegacion-principal {
+        display: none;
     }
 
     nav.navegacion-principal td {
@@ -54,8 +56,7 @@
         font-size: 1.4em;
         text-transform: uppercase;
         text-decoration: none;
-        transition: all.6s ease;
-        height: 60px;
+        
         
       
     }
@@ -76,8 +77,8 @@
     nav.navegacion-principal td:last-child:hover {
        
         color: green;
-        }
-
+        
+    }
 
     @media screen and (min-width: 768px) {
    
@@ -94,6 +95,11 @@
                 padding: 10px 10px;
                 display: inline-block;
                 padding-top: 13px;
+                height: 60px;
+                width: auto;
+                display: inline;
+                text-align: center;
+                margin:0 10px 0 0;
 
             }
 
@@ -101,9 +107,33 @@
 
         }
 
+    div.menu-movil {
+        width: 60px;
+        display: block;
+        float: right;
+        text-align: right;
+        margin-top: 12px;
+       }
+
+       div.menu-movil :hover {
+           cursor: pointer;
+       }
+       
+  @media screen and (min-width: 768px) {
+      div.menu-movil {
+          display: none;
+      }
+    }
+       
+    div.menu-movil span {
+        height: 8px;
+        margin-bottom: 6px;
+        background-color: white;
+        display: block;
+    }
+
       
     
-
 
 
 
