@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_184345) do
+ActiveRecord::Schema.define(version: 2020_03_18_085912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -185,6 +185,18 @@ ActiveRecord::Schema.define(version: 2020_03_16_184345) do
     t.index ["company_id"], name: "index_mutuals_on_company_id"
   end
 
+  create_table "payments", force: :cascade do |t|
+    t.string "date_ini"
+    t.string "quotes"
+    t.string "date_fini"
+    t.string "mount"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "laboralrelation_id"
+    t.index ["laboralrelation_id"], name: "index_payments_on_laboralrelation_id"
+  end
+
   create_table "positions", force: :cascade do |t|
     t.bigint "position_id"
     t.datetime "created_at", null: false
@@ -245,6 +257,7 @@ ActiveRecord::Schema.define(version: 2020_03_16_184345) do
   add_foreign_key "laboralrelations", "healths"
   add_foreign_key "locations", "locations"
   add_foreign_key "mutuals", "companies"
+  add_foreign_key "payments", "laboralrelations"
   add_foreign_key "positions", "positions"
   add_foreign_key "quotations", "documents"
   add_foreign_key "quotations", "positions"

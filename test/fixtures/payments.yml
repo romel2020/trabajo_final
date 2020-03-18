@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_ini: MyString
+  quotes: MyString
+  date_fini: MyString
+  mount: MyString
+  description: MyString
+
+two:
+  date_ini: MyString
+  quotes: MyString
+  date_fini: MyString
+  mount: MyString
+  description: MyString

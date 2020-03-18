@@ -2,6 +2,7 @@ class HomesController < ApplicationController
   def index
     render layout: "main"
     @quotations = Quotation.all
+    
   end
 
   def intro

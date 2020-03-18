@@ -20,6 +20,7 @@
                  <% if user_signed_in? && current_user.admin == true%>
                    
                    <td><%= link_to 'Cotizaciones  ', quotations_index_path %></td>
+                    <td><%= link_to 'Consultas  ', contacts_path %></td>
                    <td><%= link_to 'Empresa Nueva  ', new_company_path %></td>
                    <td><%= link_to 'Listado Empresas  ', companies_path %></td>
                    <% else%>
