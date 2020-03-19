@@ -31,15 +31,13 @@ class LaboralrelationsController < ApplicationController
     @laboralrelation = Laboralrelation.new(laboralrelation_params)
     @laboralrelation.employee = Employee.find(params[:employee_id])
     
-    respond_to do |format|
+    
       if @laboralrelation.save
-        format.html { redirect_to @laboralrelation, notice: 'Laboralrelation was successfully created.' }
-        format.json { render :show, status: :created, location: @laboralrelation }
+        redirect_to new_employee_path(@employee)
       else
-        format.html { redirect_to new_employee_laboralrelation_path, notice: @laboralrelation.errors}
-        format.json { render json: @laboralrelation.errors, status: :unprocessable_entity }
+        redirect_to homes_index_path
       end
-    end
+    
   end
 
   # PATCH/PUT /laboralrelations/1

@@ -45,11 +45,13 @@
         <td width="6%"><%= employee.phone %></td>
         <td width="6%"><%= employee.email %></td>
         <td width="2%"><%= employee.charges %></td>
-       <% if employee.laboralrelation_id.nil? %>
-        <td><%= 'No tiene contrato'%></td>
-        <td><%= link_to 'Contrato', new_employee_laboralrelation_path(employee) %></td>
+       <% if employee.laboralrelation.any? %>
+        <td><%= 'tiene contrato'%></td>
+        <td><%= 'No hacer nada'%></td>
+        
         <% else %>
-        <td><%= 'tiene contrato' %></td>
+        <td><%= 'No tiene contrato' %></td>
+        <td><%= link_to 'Contrato', new_employee_laboralrelation_path(employee) %></td>
         <% end %>
         
      
