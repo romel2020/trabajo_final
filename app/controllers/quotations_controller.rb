@@ -26,7 +26,7 @@ class QuotationsController < ApplicationController
     def create
         
         @quotation = Quotation.new(quotation_params)
-        if verify_recaptcha(@quotation) && @quotation.save
+        if  @quotation.save
           redirect_to quotation_show_path(@quotation), notice:"Sucotización fue enviada con exito"
         else
            flash.now[:error] = "La cotizaciòn no fue enviada"

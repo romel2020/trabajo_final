@@ -1,22 +1,36 @@
 <p id="notice"><%= notice %></p>
-
+<div class="employee-form margen-bajo">
+        <h1>Creación Exitosa !!!</h1>
+    
+<div class="container">
+   <div class=" form-cons">
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @company.name %>
 </p>
-
 <p>
-  <strong>Address:</strong>
+  <strong>Nombre Fantasia:</strong>
+  <%= @company.fantasyname %>
+</p>
+<p>
+  <strong>Rut Empresa:</strong>
+  <%= @company.companyrut %>
+</p>
+<p>
+  <strong>Dirección:</strong>
   <%= @company.address %>
 </p>
 
 <p>
-  <strong>Contact:</strong>
+  <strong>Contact0:</strong>
   <%= @company.contact %>
 </p>
-
 <p>
-  <strong>Phone:</strong>
+  <strong>Rut Contacto:</strong>
+  <%= @company.contactrut %>
+</p>
+<p>
+  <strong>Teléfono:</strong>
   <%= @company.phone %>
 </p>
 
@@ -24,6 +38,11 @@
   <strong>Location:</strong>
   <%#= @company.location %>
 </p> 
+</div>
+  </div>
+ </div> 
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+    <div class="employee-form">
+      
+      <%= link_to 'Home', homes_index_path , class:"btn btn-outline-light btn-primary text-center" %>
+    </div>

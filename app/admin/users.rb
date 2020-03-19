@@ -27,6 +27,4 @@ ActiveAdmin.register User do
     actions
     end
   end
-    
   
-

@@ -17,6 +17,7 @@ class EmployeesController < ApplicationController
   def new
     @employee = Employee.new
     @cities = Location.base_location.pluck(:name,:id)
+    @communes = Location.base_location.pluck(:name,:id)
   end
 
   # GET /employees/1/edit

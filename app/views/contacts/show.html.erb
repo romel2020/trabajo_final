@@ -1,29 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @contact.last_name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
+<div class="employee-form margen-bajo">
+        <h1>Envio Consulta Exitosa !!!</h1>
+    
+<div class="container">
+   <div class=" form-cons">
+      <p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
+         <strong>Nombre:</strong>
+        <%= @contact.name %>
+      </p>
 
-<p>
-  <strong>Consult:</strong>
-  <%= @contact.consult %>
-</p>
+      <p>
+        <strong>Apellido:</strong>
+        <%= @contact.last_name %>
+      </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', homes_index_path %>
+      <p>
+        <strong>Email:</strong>
+        <%= @contact.email %>
+      </p>
+
+      <p>
+        <strong>Telefono:</strong>
+        <%= @contact.phone %>
+      </p>
+
+      <p>
+        <strong>Consulta:</strong>
+        <%= @contact.consult %>
+      </p>
+
+
+   </div>
+  </div>
+ </div> 
+    <div class="employee-form">
+      
+      <%= link_to 'Home', homes_index_path , class:"btn btn-outline-light btn-primary text-center" %>
+    </div>

@@ -35,7 +35,7 @@ footer {
     animation: banner 28s infinite linear;
 }
 
-.contentt {
+.contentt  {
  height: 625px;
  margin: 0;
  padding: 0;
@@ -48,8 +48,13 @@ footer {
  align-items: center;
 
 }
+.contentt h1,
+h2 {
+    color: white;
+}
 
-.contentt a{
+
+.contentt a {
     text-decoration: none;
     color: #FFF;
     padding: 9px 20px;

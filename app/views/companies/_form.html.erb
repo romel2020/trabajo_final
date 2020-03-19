@@ -10,40 +10,43 @@
       </ul>
     </div>
   <% end %>
-  <div class="formulario">
-  <div class="field">
-    <%= form.label :name, "Nombre" %>
-    <%= form.text_field :name %>
+<div class="container">  
+   <div class="form-row">
+         <div class="form-group col-lg-6">
+  
+              <%= form.label "Nombre" %>
+              <%= form.text_field :name,class: 'form-control', placeholder: 'Nombre',maxlength: 50,size: 50 %>
+        </div>
+        <div class="form-group col-lg-6">  
+              <%= form.label "Nombre Fantasia" %>
+              <%= form.text_field :fantasyname,class: 'form-control', placeholder: 'Nombre',maxlength: 50,size: 50 %>
+        </div>
+    </div>   
+  <div class="form-row">
+      <div class="form-group col-xs-4 ">      
+              <%= form.label "Rut empresa" %>
+              <%= form.text_field :companyrut,class: 'form-control', placeholder: '11111111-1',maxlength: 11,size: 11 %>
+      </div>
+   
+      <div class="form-group col-lg-4 "> 
+              <%= form.label "Dirección" %>
+              <%= form.text_field :address,class: 'form-control', placeholder: 'Dirección',maxlength: 40,size: 40 %>
+      </div>
+      <div class="form-group col-lg-4 ">
+              <%= form.label "Contacto" %>
+              <%= form.text_field :contact,class: 'form-control', placeholder: 'Nombre',maxlength: 30,size: 30 %>
+      </div>
+   </div>  
+  <div class="form-row">
+      <div class="form-group col-xs-6 ">
+              <%= form.label "Rut Contacto" %>
+              <%= form.text_field :contactrut,class: 'form-control', placeholder: '11111111-1',maxlength: 11,size: 11 %>
+      </div>
+      <div class="form-group col-xs-6 ">
+              <%= form.label " Teléfono" %>
+              <%= form.text_field :phone,class: 'form-control', placeholder: '222222222',maxlength: 11,size: 11 %>
+      </div>
   </div>
-   <div class="field">
-    <%= form.label :name, "Nombre Fantasia" %>
-    <%= form.text_field :fantasyname %>
-  </div>
-  <div class="field">
-    <%= form.label :contact, "Rut empresa" %>
-    <%= form.text_field :companyrut %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address, "Dirección" %>
-    <%= form.text_field :address %>
-  </div>
-
-   <div class="field">
-    <%= form.label :contact, "Contacto" %>
-    <%= form.text_field :contact %>
-  </div>
-<div class="field">
-    <%= form.label :contact, "Rut Contacto" %>
-    <%= form.text_field :contactrut %>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :phone, " Teléfono" %>
-    <%= form.text_field :phone %>
-  </div>
-
 
 
 <!-- <%# <div class="field">
@@ -51,7 +54,9 @@
      <%#= form.select :location, options_for_select(@cities), prompt: 'select an option' %>
  <%#  </div> %> -->  
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+                  <div class="actions text-center">
+                    <%= form.submit "Enviar", class:"btn btn-primary actions" %>
+                  </div>
+
+</div>  
 <% end %>

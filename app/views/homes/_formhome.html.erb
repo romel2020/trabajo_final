@@ -1,34 +1,41 @@
-<form >
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
- </div>
-  <div class="form-group">
-    <label for="inputName">Nombre</label>
-    <input type="text" class="form-control" id="inputName" placeholder="Nombre">
-  </div>
-  <div class="form-group">
-    <label for="inputLastname">Apellido</label>
-    <input type="text" class="form-control" id="inputLastname" placeholder="Apellido">
-  </div>
-  <div class="form-group">
-    <label for="inputPhone">Celular</label>
-    <input type="text" class="form-control" id="inputPhone" placeholder="912345678">
-  </div>
-  <div class="form-group">
-    <label for="inputDescription">Consulta</label>
-    <input type="textarea" class="form-control" id="inputLastname" size ="40x6" placeholder="Consulta">
-  </div>
-  <div
-    class="g-recaptcha"
-    data-sitekey="6LesEeAUAAAAAEwiTYnAsu7GDex2jtvKNL_gek4r">
-</div>
-
-  
-  <button type="submit" class="btn btn-primary">enviar</button>
-</form>
+<%= form_with model:Contact.new, local: true do |form| %>
+              <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <%= form.label "Nombre" %>
+                     <%= form.text_field :name,class: 'form-control', placeholder: 'Nombre'  %>
+                   <!-- <label for="inputEmail4">Nombre</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Nombre">-->
+                  </div>
+                <div class="form-group col-md-6">
+                  <%= form.label "Apellido"%>
+                  <!-- <label for="inputLastname">Apellido</label> -->
+                  <%= form.text_field :last_name, class: 'form-control', placeholder: 'Apellido' %>
+                  <!--<input type="text" class="form-control" id="inputLastname" placeholder="Apellido">-->
+                </div>
+            </div>
+            <div class="form-group">
+               <%= form.label "Email"%>
+              <!--<label for="inputName">Email</label>-->
+               <%= form.text_field :email, class: 'form-control', placeholder: 'email@email' %>
+             <!--<input type="text" class="form-control" id="inputName" placeholder="email@email">-->
+            </div>
+            
+            <div class="form-group">
+                <%= form.label "Celular"%>
+             <!-- <label for="inputPhone">Celular</label>-->
+                  <%= form.text_field :phone, class: 'form-control', placeholder: '912345678' %>
+             <!-- <input type="text" class="form-control" id="inputPhone" placeholder="912345678">-->
+            </div>
+            <div class="form-group">
+                <%= form.label "Consulta"%>
+              <!--<label for="inputDescription">Consulta</label>-->
+              <%= form.text_area :consult, class: 'form-control', placeholder: 'Tu consulta aquí',size:"40x6" %>
+              <!--<input type="textarea" class="form-control" id="inputLastname" size ="40x6" placeholder="Consulta">-->
+            </div>
+          
+       <%= form.submit "Enviar", class:"btn btn-primary actions" %>
+      <!--<button type="submit" class="btn btn-primary">enviar</button>-->
+    <% end %>
 
 
 

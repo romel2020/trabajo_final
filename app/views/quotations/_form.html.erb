@@ -1,60 +1,49 @@
 
-<%=form_with(model: quotation, local: true) do |form| %>
-  <% if quotation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(quotation.errors.count, "error") %> prohibited this quotation from being saved:</h2>
-
-      <ul>
-      <% quotation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-     <div class="formulario">
-      <h1 class="formulario__titulo">Cotización</h1>
-        <div class="field ">
-          
-          <%= form.label :Nombre,"Nombre"%>
-          <%= form.text_field :name, placeholder:"Nombre" %>
+<%=form_with(model: Quotation.new, local: true) do |form| %>
+  
+    <h1 class="formulario__titulo">Cotización</h1>
+     <div class="form-row">
+         <div class="form-group col-md-6">
+           <%= form.label "Nombre"%>
+            <%= form.text_field :name,class: 'form-control', placeholder: 'Nombre',maxlength: 20,size: 20 %>
         </div>
-
-        <div class="field">
-          <%= form.label :Apellido,"Apellido" %>
-          <%= form.text_field :last_name %>
+        <div class="form-group col-md-6">
+          <%= form.label "Apellido" %>
+          <%= form.text_field :last_name,class: 'form-control', placeholder: 'Apellido',maxlength: 20,size: 20 %>
         </div>
-        <div class="field">
-          <%= form.label :Telefono,"Telefono" %>
-          <%= form.text_field :phone %>
+      </div>  
+       <div class="form-group">
+          <%= form.label "Telefono" %>
+          <%= form.text_field :phone, class: 'form-control', placeholder: '912345678' %>
         </div>
-        <div class="field">
-          <%= form.label :email,"Email" %>
-            <%= form.email_field :email %>
+       <div class="form-group">
+          <%= form.label "Email" %>
+            <%= form.email_field :email, class: 'form-control', placeholder: 'email@email' %>
         </div>
-        <div class="field">
-            <%= form.label :Compañia,"Compañia" %>
-            <%= form.text_field :compañy_size %>
+       <div class="form-group">
+            <%= form.label "Compañia" %>
+            <%= form.text_field :compañy_size,class: 'form-control', placeholder: 'Nombre',maxlength: 20,size: 20 %>
         </div>
                
-         <div class="field">
-            <%= form.label :Document_id,"Documentos mensuales" %>
-            <%= form.select :document_id, options_for_select(@document), prompt: 'select an option' %>
+        <div class="form-group">
+            <%= form.label :"Documentos mensuales" %>
+            <%= form.select :document_id, options_for_select(@document), { prompt: 'Cantidad Documentos' }, class: 'form-control' %>
         </div>
-        <div class="field">
-            <%= form.label :position_id,"Perfil" %>
-            <%= form.select :position_id, options_for_select(@position), prompt: 'select an option' %>
+       <div class="form-group">
+            <%= form.label "Perfil" %>
+            <%= form.select :position_id, options_for_select(@position),{ prompt: 'Perfil'}, class: 'form-control' %>
         </div>
 
        
-        <div class="field">
-          <%= form.label :Descripcion,"Consulta" %>
-          <%= form.text_area :help_you, size: "40x6" %>
+       <div class="form-group">
+          <%= form.label "Consulta" %>
+          <%= form.text_area :help_you ,class: 'form-control', placeholder: 'Max 800 caract',maxlength: 800, size: "40x6" %>
         </div>
         </div>
-            <%= recaptcha_tags %>
-         <div class="actions">
-          <%= form.submit %>
-         </div>
+          
+                 <div class="actions text-center">
+                    <%= form.submit "Enviar", class:"btn btn-primary actions" %>
+                  </div>
 </div>
 <% end %>
 

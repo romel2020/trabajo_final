@@ -1,26 +1,4 @@
 <div class="fon_home">
-<nav>
-<div class="dropdown float-right">
-  <a class="btn btn-signin dropdown-toggle text-danger" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <% if user_signed_in?%>
-      <%= truncate(current_user.email, length: 15)%>
-    <% else %>
-      Ingreso
-    <% end %>
-  </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink select">
-      <% if user_signed_in? %>
-      <%= link_to "Mi Perfil",  edit_user_registration_path, class:"dropdown-item" %>
-       <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
-     <% else %>
-       <%= link_to "Ingreso", new_user_session_path, class:"dropdown-item" %>
-       <%= link_to "Registro", new_user_registration_path, class:"dropdown-item" %>
-     <% end %>
-  </div>
-</div>
-</nav>
-
-
 
     <div class="cont_home">
     <h1 >    Bienvenido         </h1>

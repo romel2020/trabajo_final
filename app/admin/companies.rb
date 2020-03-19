@@ -10,7 +10,7 @@ ActiveAdmin.register Company do
   # or
   #
    permit_params do
-     permitted = [:name, :address, :contact, :phone]
+     permitted = [:name, :address, :contact, :phone, :fantasyname, :companyrut, :contactrut]
     
      permitted
    end
