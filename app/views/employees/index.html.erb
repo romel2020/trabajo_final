@@ -1,24 +1,32 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Employees</h1>
-
-<table>
+<div class="employee-form margen-bajo ">
+   <h1>Empleados</h1>
+<div class='bienvenido'>
+        <p>Pertenecen a</p>
+        <p> <%= current_user.company.name %></p>
+  </div>
+<div class='table-responsive margen_abajo'>
+    <table class='table table-striped table-bordered table-hover'>
   <thead>
     <tr>
       <th>Rut</th>
-      <th>Name</th>
-      <th>Father name</th>
-      <th>Mother name</th>
-      <th>Date ini</th>
-      <th>Nationality</th>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Fecha de Inicio</th>
+      <th>Nationalidad</th>
       <th>Sexo</th>
-      <th>Address</th>
-      <th>Phone fix</th>
-      <th>Phone</th>
+      <th>Dirección</th>
+      <th>Celular</th>
+      <th>Telefono</th>
       <th>Email</th>
-      <th>Charges</th>
+      <th>Carga</th>
       <th>Contrato</th>
-      <th colspan="3"></th>
+      <th>Acción</th>
+      <th>Mostrar</th>
+      <th>Actualizar</th>
+      <th>Eliminar</th>
+      <th colspan="17"></th>
     </tr>
   </thead>
 
@@ -40,12 +48,15 @@
         <td><%= employee.phone %></td>
         <td><%= employee.email %></td>
         <td><%= employee.charges %></td>
-       <% if employee.laboralrelation_id.nil? %>
-        <td><%= 'no tiene contrato'%></td>
-        <td><%= link_to 'New Laboralrelation', new_employee_laboralrelation_path(employee) %></td>
-        <%else%>
-        <td><%= 'tiene contrato' %></td>
+
+        <% if employee.laboralrelation.any? %>
+        <td><%= ' tiene contrato'%></td>
+        <td><%= 'Dejar igual'%></td>
+        <% else %>
+        <td><%= 'No tiene contrato' %></td>
+        <td><%= link_to 'Contrato', new_employee_laboralrelation_path(employee) %></td>
         <% end %>
+       
         
      
         <td><%= link_to 'Show', employee %></td>
@@ -57,8 +68,11 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
+<div class="employee-form">
+    <%= paginate @contract %>
+    <%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+  </div>
 
-<%= link_to 'New Employee', new_employee_path %>
-<%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+</div>

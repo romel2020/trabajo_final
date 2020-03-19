@@ -4,8 +4,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @contract = Employee.order(:name).page(params[:page])
-    @contract = Employee.where(company_id: current_user.company_id)
+   
+    @contract = Employee.where(company_id: current_user.company_id).page(params[:page])
   end
 
   # GET /employees/1
