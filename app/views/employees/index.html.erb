@@ -48,7 +48,7 @@
        <% if employee.laboralrelation_id.nil? %>
         <td><%= 'No tiene contrato'%></td>
         <td><%= link_to 'Contrato', new_employee_laboralrelation_path(employee) %></td>
-        <%else%>
+        <% else %>
         <td><%= 'tiene contrato' %></td>
         <% end %>
         

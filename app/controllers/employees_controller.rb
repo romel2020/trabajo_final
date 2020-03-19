@@ -17,7 +17,7 @@ class EmployeesController < ApplicationController
   def new
     @employee = Employee.new
     @cities = Location.base_location.pluck(:name,:id)
-    @communes = Location.base_location.pluck(:name,:id)
+    
   end
 
   # GET /employees/1/edit
@@ -30,10 +30,11 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
     @employee.company_id = current_user.company.id
     @employee.user_id    = current_user.id
-    create = params[:employee][:contrato]
-    create.inspect
+    conection = params[:employee][:contrato]
+    
+    @cities = Location.base_location.pluck(:name,:id)
       if @employee.save
-          if create == '1'
+          if conection == '1'
               redirect_to new_employee_laboralrelation_path(@employee)
           else
             redirect_to @employee
@@ -78,6 +79,6 @@ class EmployeesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def employee_params
-      params.require(:employee).permit(:rut, :name, :father_name, :mother_name, :date_ini, :nationality, :sexo, :address, :phone_fix, :phone, :email, :charges)
+      params.require(:employee).permit(:rut, :name, :father_name, :mother_name, :date_ini, :nationality, :sexo, :address, :phone_fix, :phone, :email, :charges, :location_id)
     end
 end

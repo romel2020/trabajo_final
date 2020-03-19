@@ -15,5 +15,10 @@ class Location < ApplicationRecord
     end
   end
 
+
+  def father_name
+    Location.find(self.location_id).name
+  end
+    
 end
 

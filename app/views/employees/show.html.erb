@@ -1,32 +1,37 @@
 <p id="notice"><%= notice %></p>
 
+<div class="employee-form margen-bajo">
+        <h1>Creación Exitosa !!!</h1>
+    
+<div class="container">
+   <div class=" form-cons">
 <p>
   <strong>Rut:</strong>
   <%= @employee.rut %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @employee.name %>
 </p>
 
 <p>
-  <strong>Father name:</strong>
+  <strong>Apellido Paterno:</strong>
   <%= @employee.father_name %>
 </p>
 
 <p>
-  <strong>Mother name:</strong>
+  <strong>Apellido Materno:</strong>
   <%= @employee.mother_name %>
 </p>
 
 <p>
-  <strong>Date ini:</strong>
+  <strong>Fecha Inicio:</strong>
   <%= @employee.date_ini %>
 </p>
 
 <p>
-  <strong>Nationality:</strong>
+  <strong>Nacionalidad:</strong>
   <%= @employee.nationality %>
 </p>
 
@@ -34,19 +39,26 @@
   <strong>Sexo:</strong>
   <%= @employee.sexo %>
 </p>
-
 <p>
-  <strong>Address:</strong>
+  <strong>Ciudad:</strong>
+  <%= @employee.location.name%>
+</p>
+<p>
+  <strong>Comuna:</strong>
+  <%= @employee.location.father_name %>
+</p>
+<p>
+  <strong>Dirección:</strong>
   <%= @employee.address %>
 </p>
 
 <p>
-  <strong>Phone fix:</strong>
+  <strong>Celular:</strong>
   <%= @employee.phone_fix %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong>Telefóno:</strong>
   <%= @employee.phone %>
 </p>
 
@@ -56,10 +68,13 @@
 </p>
 
 <p>
-  <strong>Charges:</strong>
+  <strong>Cargas:</strong>
   <%= @employee.charges %>
 </p>
-
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
-<%= link_to 'Crear Contrato', new_employee_laboralrelation_path(@employee)%>
+</div>
+  </div>
+ </div> 
+    <div class="employee-form">
+      
+      <%= link_to 'Home', homes_index_path , class:"btn btn-outline-light btn-primary text-center" %>
+    </div>
