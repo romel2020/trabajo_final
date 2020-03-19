@@ -22,6 +22,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1/edit
   def edit
+    @cities = Location.base_location.pluck(:name,:id)
   end
 
   # POST /employees
