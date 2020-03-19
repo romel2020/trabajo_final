@@ -4,7 +4,7 @@ class LaboralrelationsController < ApplicationController
   # GET /laboralrelations
   # GET /laboralrelations.json
   def index
-    @laboralrelations = Laboralrelation.all
+    @laboralrelations = Laboralrelation..order(:employee_id).page(params[:page])
   end
 
   # GET /laboralrelations/1

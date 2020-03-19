@@ -42,6 +42,16 @@ animation: fon_home 15s infinite linear;
     color: #333;
 }
 
+div.contraer {
+    display: none;
+}
+
+@media only screen and (min-width:768px) {
+    div.contraer {
+        display:inline
+    }
+}
+
 @keyframes fon_home {
 
     0% {

@@ -4,4 +4,5 @@ class Company < ApplicationRecord
   # belongs_to :mutual
  # belongs_to :compensationbox
  # belongs_to :location
+ paginates_per 5
 end

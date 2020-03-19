@@ -15,7 +15,10 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'puma', '~> 3.11'
 gem 'cancancan'
 gem 'activeadmin'
-gem "active_skin"
+gem 'active_skin'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

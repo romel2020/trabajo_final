@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all.reverse
+    @contacts = Contact.order(:name).page(params[:page])
     render layout: "login"
    end
 

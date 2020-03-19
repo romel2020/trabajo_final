@@ -1,4 +1,4 @@
-<div class=" fondo_formulario">
+<div class="employee-form margen-bajo ">
  
     <h1 class='text-center'>Cotizaciones</h1>
 
@@ -59,8 +59,12 @@
         <% end %>
       </tbody>
     </table>
+    
     </div>
 
-<br>
-<%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+<div class="employee-form">
+    <%= paginate @quotations %>
+    <%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+</div>
+
 </div>

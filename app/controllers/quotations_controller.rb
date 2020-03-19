@@ -3,7 +3,7 @@ class QuotationsController < ApplicationController
    
     def index
      
-        @quotations = Quotation.all.reverse
+        @quotations = Quotation.order(:name).page(params[:page])
         @todos = Quotation.where( status: true)
         render layout: "login"
     end

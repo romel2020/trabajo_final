@@ -19,6 +19,8 @@ div.contador {
     position: relative;
     height: auto;
     background-image: image-url("ciudad.jpg"); 
+    margin-top: 0px;
+    margin-bottom: 0px;
    
 }
 
@@ -30,6 +32,7 @@ div.contador:before {
 ul.resumen-evento {
     position: relative;
     padding: 120px 0;
+   
 }
 
 ul.resumen-evento li {
@@ -81,17 +84,23 @@ div.tabla-precio ul li {
 }
 
 div.tabla-precio h3 {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
     text-transform: uppercase;
+    color:#fe4918;
 }
 
 div.tabla-precio p.numero {
     color: black;
     margin: 20px 0;
-    font-size: 4em;
+    font-size: 1em;
     display: block;
     margin: 0 0 10px 0;
+}
+
+
+div.maps iframe  {
+    width: 50%;
 }
 
 
@@ -104,5 +113,11 @@ div.tabla-precio p.numero {
 @media only screen and (min-width:768px){
     ul.resumen-evento li {
         width: 25%;
+    }
+}
+
+@media only screen and (min-width:768px){
+    div.maps iframe  {
+        width: 142%;
     }
 }

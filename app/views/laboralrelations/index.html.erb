@@ -30,7 +30,7 @@
   </tbody>
 </table>
 
-<br>
-
-
-<%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+<div class="employee-form">
+    <%= paginate @laboralrelation %>
+    <%= link_to 'Home', homes_index_path, class:"btn btn-outline-light btn-primary text-center" %>
+</div>
