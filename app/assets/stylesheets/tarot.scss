@@ -1,0 +1,92 @@
+.jumbo {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: a11 .1s ease-in-out;
+    background-image: image-url("conta1.jpeg");
+    background-repeat: no-repeat;
+    animation: jumbo 28s infinite linear;
+}
+
+@keyframes jumbo {
+
+    0%{
+        background-image: image-url("tarot1.jpeg");
+        background-repeat: no-repeat;
+    }
+
+    25%{
+        background-image: image-url("tarot1.jpeg");
+        background-repeat: no-repeat;
+    }
+    26% {
+        background-image: image-url("tarot2.jpeg");
+        background-repeat: no-repeat;
+    }
+    50%{
+        background-image: image-url("tarot2.jpeg");
+        background-repeat: no-repeat;
+    }
+    51%{
+        background-image: image-url("tarot3.png");
+        background-repeat: no-repeat;
+    }
+    75%{
+        background-image: image-url("tarot3.png");
+        background-repeat: no-repeat;
+    }
+    76%{
+        background-image: image-url("tarot4.jpeg");
+        background-repeat: no-repeat;
+    }
+    100%{
+        background-image: image-url("tarot4.jpeg");
+        background-repeat: no-repeat;
+    }
+
+}
+
+
+div.table-preci {
+
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    padding: 40px 0;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+div.table-preci:hover {
+    transform: scale(1.1);
+    border: 1px solid #fe4918;
+    box-shadow: 0px 0px 50 px #666;
+}
+
+div.table-preci ul li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+    list-style: none;
+
+}
+
+div.table-preci h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color:#fe4918;
+
+}
+
+div.table-preci p.numero {
+    color: black;
+    margin: 20px 0;
+    font-size: 1em;
+    display: block;
+    margin: 0 0 10px 0;
+
+}

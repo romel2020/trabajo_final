@@ -9,8 +9,8 @@ class HomesController < ApplicationController
     render layout: "intro"
   end
 
-  def planes
-    render layout: "about"
+  def tarot
+    render layout: "tarot"
   end
 
   def about

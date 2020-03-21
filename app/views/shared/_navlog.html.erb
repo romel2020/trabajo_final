@@ -28,7 +28,7 @@
                          <td><%= link_to 'Empleado  ', new_employee_path %></td>
                         <td><%= link_to 'Listado', employees_path %></td>
                          <% else %>
-                           <td><%= link_to 'Planes ',homes_planes_path, :id => "confiar"%></td>
+                           <td><%= link_to '**Lectura Tarot** ',homes_tarot_path, :id => "confiar"%></td>
                             <td><%= link_to 'Cotización Contable  ', quotations_new_path, remote: true %></td>
                             <td  class="borderr nav-td"><%= link_to 'Contactanos  ',homes_new_path,  remote: true %></td>
                     <% end %>

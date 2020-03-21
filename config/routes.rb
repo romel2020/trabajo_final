@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'homes/index'
   get 'homes/about', to:'homes#about'
-  get 'homes/planes', to:'homes#planes'
+  get 'homes/tarot', to:'homes#tarot'
   get 'homes/new', to:'homes#new'
   get 'quotations/index'
   get 'quotations/:id/show', to: 'quotations#show', as:'quotation_show'
